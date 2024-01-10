@@ -1,0 +1,6 @@
+C:/Users/Ben/source/repos/Dice Roller/CMakeFiles/ALL_BUILD.dir
+C:/Users/Ben/source/repos/Dice Roller/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir
+C:/Users/Ben/source/repos/Dice Roller/CSC8503CoreClasses/CMakeFiles/CSC8503CoreClasses.dir
+C:/Users/Ben/source/repos/Dice Roller/OpenGLRendering/CMakeFiles/OpenGLRendering.dir
+C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir

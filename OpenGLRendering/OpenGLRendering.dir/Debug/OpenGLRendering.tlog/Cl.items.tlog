@@ -1,0 +1,13 @@
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\CMakeFiles\OpenGLRendering.dir\cmake_pch.cxx;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\cmake_pch.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLTexture.h;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLTexture.h.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLShader.h;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLShader.h.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLRenderer.h;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLRenderer.h.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLMesh.h;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLMesh.h.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLComputeShader.h;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLComputeShader.h.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLTexture.cpp;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLTexture.cpp.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLShader.cpp;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLShader.cpp.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLRenderer.cpp;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLRenderer.cpp.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLMesh.cpp;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLMesh.cpp.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OGLComputeShader.cpp;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\OGLComputeShader.cpp.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\glad\gl.h;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\glad\gl.h.obj
+C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\glad\gl.c;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.dir\Debug\glad\gl.c.obj
