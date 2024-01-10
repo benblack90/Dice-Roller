@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+/.vs
+/out/build/x64-Debug
+/x64
+/CSC8503/CMakeFiles/CSC8503.dir
+/CSC8503/CSC8503.dir
+/CSC8503CoreClasses/CMakeFiles/CSC8503CoreClasses.dir
+/CSC8503CoreClasses/CSC8503CoreClasses.dir
+/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir
+/NCLCoreClasses/NCLCoreClasses.dir
