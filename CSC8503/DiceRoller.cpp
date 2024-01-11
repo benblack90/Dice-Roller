@@ -70,6 +70,7 @@ void DiceRoller::InitialiseAssets() {
 	d10Tex = renderer->LoadTexture("d10_Albedo.png");
 	d12Tex = renderer->LoadTexture("d12_Albedo.png");
 	d20Tex = renderer->LoadTexture("d20_Albedo.png");
+	woodTex = renderer->LoadTexture("wood_Albedo.png");
 	basicShader = renderer->LoadShader("scene.vert", "scene.frag");
 
 	InitCamera();
@@ -93,6 +94,7 @@ DiceRoller::~DiceRoller() {
 	delete d10Tex;
 	delete d12Tex;
 	delete d20Tex;
+	delete woodTex;
 	delete basicShader;
 
 	delete physics;
@@ -281,14 +283,13 @@ void DiceRoller::InitWorld() {
 	world->ClearAndErase();
 	physics->Clear();
 
-	InitDefaultFloor();
+	InitDiceTray();
 	for (int i = 0; i < 1; i++)
 	{
-		//AddD4({ 0,0,(float)i * 5 + 2 }, 1, 10);
-		//AddD6({ 0,0,(float)i * 5 }, { 0.5,0.5,0.5 }, 10);
-		//AddD8({ 0,0,(float)i * 5 +4}, 1, 10);
-
-		AddD20({ 0,0,0 }, 1, 10);
+		AddD4({ 0,5,(float)i * 12 }, 1, 10);
+		AddD6({ 0,5,(float)i * 12 +2}, { 0.5,0.5,0.5 }, 10);
+		AddD8({ 0,5,(float)i * 12 +4}, 1, 10);
+		AddD20({ 0,5,(float)i * 12 + 6 }, 1, 10);
 	}
 
 
@@ -385,8 +386,6 @@ GameObject* DiceRoller::AddD20(const Vector3& position, float height, float inve
 	d20->GetPhysicsObject()->InitSphereInertia();
 	world->AddGameObject(d20);
 	return d20;
-
-	return nullptr;
 }
 
 GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensions, float inverseMass) {
@@ -419,15 +418,16 @@ A single function to add a large immoveable cube to the bottom of our world
 GameObject* DiceRoller::AddFloorToWorld(const Vector3& position) {
 	GameObject* floor = new GameObject();
 
-	Vector3 floorSize = Vector3(200, 10, 200);
+	Vector3 floorSize = Vector3(20, 1, 20);
 	AABBVolume* volume = new AABBVolume(floorSize);
 	floor->SetBoundingVolume((CollisionVolume*)volume);
 	floor->GetTransform()
 		.SetScale(floorSize * 2)
 		.SetPosition(position);
 
-	floor->SetRenderObject(new RenderObject(&floor->GetTransform(), cubeMesh, basicTex, basicShader));
+	floor->SetRenderObject(new RenderObject(&floor->GetTransform(), cubeMesh, woodTex, basicShader));
 	floor->SetPhysicsObject(new PhysicsObject(&floor->GetTransform(), floor->GetBoundingVolume()));
+	floor->SetCollisionLayer(staticObj);
 
 	floor->GetPhysicsObject()->SetInverseMass(0);
 	floor->GetPhysicsObject()->InitCubeInertia();
@@ -467,8 +467,9 @@ GameObject* DiceRoller::AddSphereToWorld(const Vector3& position, float radius, 
 	return sphere;
 }
 
-void DiceRoller::InitDefaultFloor() {
-	AddFloorToWorld(Vector3(0, -20, 0));
+void DiceRoller::InitDiceTray() {
+	GameObject* floor = AddFloorToWorld(Vector3(0, 0, 0));
+
 }
 
 

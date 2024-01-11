@@ -37,7 +37,7 @@ namespace NCL {
 			void InitMixedGridWorld(int numRows, int numCols, float rowSpacing, float colSpacing);
 			void InitCubeGridWorld(int numRows, int numCols, float rowSpacing, float colSpacing, const Vector3& cubeDims);
 
-			void InitDefaultFloor();
+			void InitDiceTray();
 
 			bool SelectObject();
 			void MoveSelectedObject();
@@ -82,6 +82,7 @@ namespace NCL {
 			Texture* d10Tex = nullptr;
 			Texture* d12Tex = nullptr;
 			Texture* d20Tex = nullptr;
+			Texture* woodTex = nullptr;
 			Shader* basicShader = nullptr;
 
 			//dice meshes
@@ -91,6 +92,8 @@ namespace NCL {
 			Mesh* d10Mesh = nullptr;
 			Mesh* d12Mesh = nullptr;
 			Mesh* d20Mesh = nullptr;
+
+		
 
 			//Coursework Additional functionality	
 			GameObject* lockedObject = nullptr;
