@@ -1,87 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\CSC8503.dir\cmake_pch.cxx">
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\CSC8503.dir\cmake_pch.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\GameTechRenderer.cpp">
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\GameTechRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Main.cpp">
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkedGame.cpp">
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\StateGameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkPlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\StateGameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\DiceRoller.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CCTVStateObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\EvilGoose.cpp">
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\DiceRoller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\GameTechRenderer.h">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\GameTechRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkedGame.h">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\StateGameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkPlayer.h">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\DiceRoller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\StateGameObject.h">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\PlayerObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\DiceRoller.h">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Block.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CCTVStateObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\PlayerObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\SpawnGoal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\EvilGoose.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\CSC8503.dir\Debug\cmake_pch.hxx">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\CSC8503.dir\Debug\cmake_pch.hxx">
       <Filter>Precompile Header File</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\CSC8503.dir\Release\cmake_pch.hxx">
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\CSC8503.dir\Release\cmake_pch.hxx">
       <Filter>Precompile Header File</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{721080F8-811F-3672-A7B1-153809B56529}</UniqueIdentifier>
+      <UniqueIdentifier>{70325260-D742-3697-BA9F-67946828A381}</UniqueIdentifier>
     </Filter>
     <Filter Include="Precompile Header File">
-      <UniqueIdentifier>{9AF5B58F-C214-3A7D-8E29-4E1C905F956E}</UniqueIdentifier>
+      <UniqueIdentifier>{C73C6E94-958E-3E96-A73B-4321126C5BC8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{22877A88-E54C-3C31-88A9-C1FF576C38A0}</UniqueIdentifier>
+      <UniqueIdentifier>{9F721815-3960-3A9D-9DC9-03EAFC38197D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

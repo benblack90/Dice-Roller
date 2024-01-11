@@ -14,9 +14,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DACAD4DF-823F-3B77-BB25-B99B3227A709}</ProjectGuid>
+    <ProjectGuid>{B6F72BCA-A92D-3E46-8C7E-CFD85EE2BB52}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>CSC8503</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -42,13 +42,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ben\source\repos\Dice Roller\x64\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\repos\Dice-Roller\x64\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CSC8503.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CSC8503</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ben\source\repos\Dice Roller\x64\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\repos\Dice-Roller\x64\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CSC8503.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CSC8503</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\OpenGLRendering;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\OpenGLRendering;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -66,22 +66,22 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>C:/Users/Ben/source/repos/Dice Roller/CSC8503/CSC8503.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CSC8503.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SDLCheck>true</SDLCheck>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION="C:/Users/Ben/source/repos/Dice Roller/Assets/";NOMINMAX;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION="C:/Users/a8038295/source/repos/Dice-Roller/Assets/";NOMINMAX;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION=\"C:/Users/Ben/source/repos/Dice Roller/Assets/\";NOMINMAX;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\OpenGLRendering;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION=\"C:/Users/a8038295/source/repos/Dice-Roller/Assets/\";NOMINMAX;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\OpenGLRendering;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\OpenGLRendering;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\OpenGLRendering;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -94,8 +94,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Ben/source/repos/Dice Roller/x64/Debug/CSC8503.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Ben/source/repos/Dice Roller/x64/Debug/CSC8503.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/a8038295/source/repos/Dice-Roller/x64/Debug/CSC8503.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/a8038295/source/repos/Dice-Roller/x64/Debug/CSC8503.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -104,7 +104,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\OpenGLRendering;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\OpenGLRendering;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -115,22 +115,22 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>C:/Users/Ben/source/repos/Dice Roller/CSC8503/CSC8503.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CSC8503.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SDLCheck>true</SDLCheck>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION="C:/Users/Ben/source/repos/Dice Roller/Assets/";NOMINMAX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION="C:/Users/a8038295/source/repos/Dice-Roller/Assets/";NOMINMAX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION=\"C:/Users/Ben/source/repos/Dice Roller/Assets/\";NOMINMAX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\OpenGLRendering;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;_WINSOCK2API_;_WINSOCK_DEPRECATED_NO_WARNINGS;ASSETROOTLOCATION=\"C:/Users/a8038295/source/repos/Dice-Roller/Assets/\";NOMINMAX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\OpenGLRendering;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\OpenGLRendering;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses;C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\OpenGLRendering;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\..\CSC8503CoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses;C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,9 +144,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Ben/source/repos/Dice Roller/x64/Release/CSC8503.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/a8038295/source/repos/Dice-Roller/x64/Release/CSC8503.lib</ImportLibrary>
       <OptimizeReferences>true</OptimizeReferences>
-      <ProgramDataBaseFile>C:/Users/Ben/source/repos/Dice Roller/x64/Release/CSC8503.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/a8038295/source/repos/Dice-Roller/x64/Release/CSC8503.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -154,11 +154,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Ben/source/repos/Dice Roller" "-BC:/Users/Ben/source/repos/Dice Roller" --check-stamp-file "C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/generate.stamp"
+C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\bin\cmake.exe -SC:/Users/a8038295/source/repos/Dice-Roller -BC:/Users/a8038295/source/repos/Dice-Roller --check-stamp-file C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -166,12 +166,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ben\source\repos\Dice Roller\CMake\Default.cmake;C:\Users\Ben\source\repos\Dice Roller\CMake\DefaultCXX.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\repos\Dice-Roller\CMake\Default.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMake\DefaultCXX.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Ben/source/repos/Dice Roller" "-BC:/Users/Ben/source/repos/Dice Roller" --check-stamp-file "C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/generate.stamp"
+C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\bin\cmake.exe -SC:/Users/a8038295/source/repos/Dice-Roller -BC:/Users/a8038295/source/repos/Dice-Roller --check-stamp-file C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -179,103 +179,73 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ben\source\repos\Dice Roller\CMake\Default.cmake;C:\Users\Ben\source\repos\Dice Roller\CMake\DefaultCXX.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\repos\Dice-Roller\CMake\Default.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMake\DefaultCXX.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\CSC8503.dir\cmake_pch.cxx">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\CSC8503.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CSC8503.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CSC8503.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CSC8503.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CSC8503.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\GameTechRenderer.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkedGame.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkPlayer.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\StateGameObject.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\DiceRoller.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Block.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CCTVStateObject.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\PlayerObject.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\SpawnGoal.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Menu.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\EvilGoose.h" />
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\GameTechRenderer.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\GameTechRenderer.h" />
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\StateGameObject.h" />
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\DiceRoller.h" />
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\PlayerObject.h" />
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\Menu.h" />
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\GameTechRenderer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Main.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\Main.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkedGame.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\StateGameObject.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\NetworkPlayer.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\DiceRoller.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\StateGameObject.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\DiceRoller.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CCTVStateObject.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\EvilGoose.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
-    </ClCompile>
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\CSC8503.dir\Debug\cmake_pch.hxx" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CMakeFiles\CSC8503.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\CSC8503.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CMakeFiles\CSC8503.dir\Release\cmake_pch.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\ZERO_CHECK.vcxproj">
-      <Project>{FE9B2181-E61D-3DB3-AA4D-F51B9F98360C}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\ZERO_CHECK.vcxproj">
+      <Project>{2CA6FB99-1469-352B-B0F4-BD978F8D128C}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CSC8503CoreClasses.vcxproj">
-      <Project>{AAD46FB0-6799-3BDB-A9D0-4E97313ECB59}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CSC8503CoreClasses.vcxproj">
+      <Project>{CD93579E-CD2E-30AE-BAAD-AB4BF0ACD636}</Project>
       <Name>CSC8503CoreClasses</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\NCLCoreClasses.vcxproj">
-      <Project>{2F07D8FC-9944-3F32-837C-7F053F5BCB6C}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\NCLCoreClasses.vcxproj">
+      <Project>{4C3A0999-DAF3-324F-BA03-50E2B5CB9889}</Project>
       <Name>NCLCoreClasses</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.vcxproj">
-      <Project>{3C2AD4AE-36B0-3A29-BE5A-C51C2BC03591}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering\OpenGLRendering.vcxproj">
+      <Project>{8F946655-D6C7-3B84-A541-2BE02A9E436A}</Project>
       <Name>OpenGLRendering</Name>
     </ProjectReference>
   </ItemGroup>

@@ -17,9 +17,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C3752377-EF5C-3294-9187-387E99265006}</ProjectGuid>
+    <ProjectGuid>{2DA16C9D-6002-375F-B3FB-2A03E9651713}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -68,11 +68,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Ben\source\repos\Dice Roller\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\a8038295\source\repos\Dice-Roller\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Ben/source/repos/Dice Roller" "-BC:/Users/Ben/source/repos/Dice Roller" --check-stamp-file "C:/Users/Ben/source/repos/Dice Roller/CMakeFiles/generate.stamp"
+C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\bin\cmake.exe -SC:/Users/a8038295/source/repos/Dice-Roller -BC:/Users/a8038295/source/repos/Dice-Roller --check-stamp-file C:/Users/a8038295/source/repos/Dice-Roller/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -80,12 +80,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\Ben\source\repos\Dice Roller\CMake\Utils.cmake;C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMake\Utils.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Ben/source/repos/Dice Roller" "-BC:/Users/Ben/source/repos/Dice Roller" --check-stamp-file "C:/Users/Ben/source/repos/Dice Roller/CMakeFiles/generate.stamp"
+C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\bin\cmake.exe -SC:/Users/a8038295/source/repos/Dice-Roller -BC:/Users/a8038295/source/repos/Dice-Roller --check-stamp-file C:/Users/a8038295/source/repos/Dice-Roller/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -93,34 +93,34 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\Ben\source\repos\Dice Roller\CMake\Utils.cmake;C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ben\source\repos\Dice Roller\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMake\Utils.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\3.28.0-rc5\CMakeCXXCompiler.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\3.28.0-rc5\CMakeRCCompiler.cmake;C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\3.28.0-rc5\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\repos\Dice-Roller\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\ZERO_CHECK.vcxproj">
-      <Project>{FE9B2181-E61D-3DB3-AA4D-F51B9F98360C}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\ZERO_CHECK.vcxproj">
+      <Project>{2CA6FB99-1469-352B-B0F4-BD978F8D128C}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\CSC8503.vcxproj">
-      <Project>{DACAD4DF-823F-3B77-BB25-B99B3227A709}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503\CSC8503.vcxproj">
+      <Project>{B6F72BCA-A92D-3E46-8C7E-CFD85EE2BB52}</Project>
       <Name>CSC8503</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CSC8503CoreClasses.vcxproj">
-      <Project>{AAD46FB0-6799-3BDB-A9D0-4E97313ECB59}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CSC8503CoreClasses.vcxproj">
+      <Project>{CD93579E-CD2E-30AE-BAAD-AB4BF0ACD636}</Project>
       <Name>CSC8503CoreClasses</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\NCLCoreClasses.vcxproj">
-      <Project>{2F07D8FC-9944-3F32-837C-7F053F5BCB6C}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\NCLCoreClasses.vcxproj">
+      <Project>{4C3A0999-DAF3-324F-BA03-50E2B5CB9889}</Project>
       <Name>NCLCoreClasses</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\OpenGLRendering.vcxproj">
-      <Project>{3C2AD4AE-36B0-3A29-BE5A-C51C2BC03591}</Project>
+    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering\OpenGLRendering.vcxproj">
+      <Project>{8F946655-D6C7-3B84-A541-2BE02A9E436A}</Project>
       <Name>OpenGLRendering</Name>
     </ProjectReference>
   </ItemGroup>

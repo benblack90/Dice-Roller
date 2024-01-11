@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Ben/source/repos/Dice Roller/CSC8503CoreClasses
+# Install script for directory: C:/Users/a8038295/source/repos/Dice-Roller/CSC8503CoreClasses
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
