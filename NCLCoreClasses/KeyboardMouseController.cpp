@@ -12,31 +12,8 @@ https://research.ncl.ac.uk/game/
 
 using namespace NCL;
 float	KeyboardMouseController::GetAxis(uint32_t axis) const {
-	if (axis == XAxis) {
-		if (keyboard.KeyDown(NCL::KeyCodes::A)) {
-			return -1.0f;
-		}
-		if (keyboard.KeyDown(NCL::KeyCodes::D)) {
-			return 1.0f;
-		}
-	}
-	else if (axis == ZAxis) {
-		if (keyboard.KeyDown(NCL::KeyCodes::W)) {
-			return 1.0f;
-		}
-		if (keyboard.KeyDown(NCL::KeyCodes::S)) {
-			return -1.0f;
-		}
-	}
-	else if (axis == YAxis) {
-		if (keyboard.KeyDown(NCL::KeyCodes::SHIFT)) {
-			return 1.0f;
-		}
-		if (keyboard.KeyDown(NCL::KeyCodes::CONTROL)) {
-			return -1.0f;
-		}
-	}
-	else if (axis == XAxisMouse) {
+
+	if (axis == XAxisMouse) {
 		return mouse.GetRelativePosition().x;
 	}
 	else if (axis == YAxisMouse) {

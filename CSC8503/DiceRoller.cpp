@@ -273,9 +273,9 @@ void DiceRoller::DebugObjectMovement() {
 void DiceRoller::InitCamera() {
 	world->GetMainCamera().SetNearPlane(0.1f);
 	world->GetMainCamera().SetFarPlane(500.0f);
-	world->GetMainCamera().SetPitch(-15.0f);
+	world->GetMainCamera().SetPitch(-40.0f);
 	world->GetMainCamera().SetYaw(315.0f);
-	world->GetMainCamera().SetPosition(Vector3(-60, 40, 60));
+	world->GetMainCamera().SetPosition(Vector3(-15, 20, 15));
 	lockedObject = nullptr;
 }
 
@@ -388,7 +388,7 @@ GameObject* DiceRoller::AddD20(const Vector3& position, float height, float inve
 	return d20;
 }
 
-GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensions, float inverseMass) {
+GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensions, Texture* tex,float inverseMass) {
 	GameObject* cube = new GameObject();
 
 	AABBVolume* volume = new AABBVolume(dimensions);
@@ -398,8 +398,8 @@ GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensio
 		.SetPosition(position)
 		.SetScale(dimensions * 2);
 	
-
-	cube->SetRenderObject(new RenderObject(&cube->GetTransform(), cubeMesh, basicTex, basicShader));
+	if (tex == nullptr) tex = basicTex;
+	cube->SetRenderObject(new RenderObject(&cube->GetTransform(), cubeMesh, tex, basicShader));
 	cube->SetPhysicsObject(new PhysicsObject(&cube->GetTransform(), cube->GetBoundingVolume()));
 
 	cube->GetPhysicsObject()->SetInverseMass(inverseMass);
@@ -415,14 +415,13 @@ GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensio
 A single function to add a large immoveable cube to the bottom of our world
 
 */
-GameObject* DiceRoller::AddFloorToWorld(const Vector3& position) {
+GameObject* DiceRoller::AddFloorToWorld(const Vector3& position, const Vector3& dimensions) {
 	GameObject* floor = new GameObject();
 
-	Vector3 floorSize = Vector3(20, 1, 20);
-	AABBVolume* volume = new AABBVolume(floorSize);
+	AABBVolume* volume = new AABBVolume(dimensions);
 	floor->SetBoundingVolume((CollisionVolume*)volume);
 	floor->GetTransform()
-		.SetScale(floorSize * 2)
+		.SetScale(dimensions * 2)
 		.SetPosition(position);
 
 	floor->SetRenderObject(new RenderObject(&floor->GetTransform(), cubeMesh, woodTex, basicShader));
@@ -467,47 +466,14 @@ GameObject* DiceRoller::AddSphereToWorld(const Vector3& position, float radius, 
 	return sphere;
 }
 
-void DiceRoller::InitDiceTray() {
-	GameObject* floor = AddFloorToWorld(Vector3(0, 0, 0));
-
-}
-
-
-void DiceRoller::InitSphereGridWorld(int numRows, int numCols, float rowSpacing, float colSpacing, float radius) {
-	for (int x = 0; x < numCols; ++x) {
-		for (int z = 0; z < numRows; ++z) {
-			Vector3 position = Vector3(x * colSpacing, 10.0f, z * rowSpacing);
-			AddSphereToWorld(position, radius, 1.0f);
-		}
-	}
-	AddFloorToWorld(Vector3(0, -2, 0));
-}
-
-void DiceRoller::InitMixedGridWorld(int numRows, int numCols, float rowSpacing, float colSpacing) {
-	float sphereRadius = 1.0f;
-	Vector3 cubeDims = Vector3(1, 1, 1);
-
-	for (int x = 0; x < numCols; ++x) {
-		for (int z = 0; z < numRows; ++z) {
-			Vector3 position = Vector3(x * colSpacing, 10.0f, z * rowSpacing);
-
-			if (rand() % 2) {
-				AddCubeToWorld(position, cubeDims);
-			}
-			else {
-				AddSphereToWorld(position, sphereRadius);
-			}
-		}
-	}
-}
-
-void DiceRoller::InitCubeGridWorld(int numRows, int numCols, float rowSpacing, float colSpacing, const Vector3& cubeDims) {
-	for (int x = 1; x < numCols + 1; ++x) {
-		for (int z = 1; z < numRows + 1; ++z) {
-			Vector3 position = Vector3(x * colSpacing, 10.0f, z * rowSpacing);
-			AddCubeToWorld(position, cubeDims, 1.0f);
-		}
-	}
+void DiceRoller::InitDiceTray() 
+{
+	Vector3 dimensions = { 15,2,15 };
+	GameObject* floor = AddFloorToWorld({0,0,0}, dimensions);
+	AddCubeToWorld({ 0,dimensions.y,dimensions.z - 1.0f}, { dimensions.x,3,1 },woodTex, 0);
+	AddCubeToWorld({ 0,dimensions.y,-dimensions.z+1.0f}, { dimensions.x,3,1 }, woodTex,0);
+	AddCubeToWorld({ dimensions.x-1.0f,dimensions.y,0 }, { 1,3,dimensions.z },woodTex, 0);
+	AddCubeToWorld({ -dimensions.x+1.0f,dimensions.y,0 }, { 1,3,dimensions.z },woodTex, 0);
 }
 
 /*
