@@ -284,15 +284,11 @@ void DiceRoller::InitWorld() {
 	physics->Clear();
 
 	InitDiceTray();
-	for (int i = 0; i < 1; i++)
-	{
-		AddD4({ 0,5,(float)i * 12 }, 1, 10);
-		AddD6({ 0,5,(float)i * 12 +2}, { 0.5,0.5,0.5 }, 10);
-		AddD8({ 0,5,(float)i * 12 +4}, 1, 10);
-		AddD20({ 0,5,(float)i * 12 + 6 }, 1, 10);
-	}
 
-
+	AddD4({ -20,0,-8 }, 1, 10);
+	AddD6({  -18,0,-6 }, { 0.5,0.5,0.5 }, 10);
+	AddD8({  -16,0,-4}, 1, 10);
+	AddD20({ -14,0,-2 }, 1, 10);
 }
 
 GameObject* DiceRoller::AddD4(const Vector3& position, float height, float inverseMass)
@@ -306,7 +302,7 @@ GameObject* DiceRoller::AddD4(const Vector3& position, float height, float inver
 	d4->GetTransform()
 		.SetScale(d4Size)
 		.SetPosition(position);
-	
+
 	d4->SetRenderObject(new RenderObject(&d4->GetTransform(), d4Mesh, d4Tex, basicShader));
 	d4->SetPhysicsObject(new PhysicsObject(&d4->GetTransform(), d4->GetBoundingVolume()));
 	d4->GetPhysicsObject()->SetInverseMass(inverseMass);
@@ -348,7 +344,7 @@ GameObject* DiceRoller::AddD8(const Vector3& position, float height, float inver
 	d8->GetTransform()
 		.SetScale(d8Size)
 		.SetPosition(position)
-		.SetOrientation(Quaternion::AxisAngleToQuaterion({0.7,0.7,0.7},20));
+		.SetOrientation(Quaternion::AxisAngleToQuaterion({ 0.7,0.7,0.7 }, 20));
 
 	d8->SetRenderObject(new RenderObject(&d8->GetTransform(), d8Mesh, d8Tex, basicShader));
 	d8->SetPhysicsObject(new PhysicsObject(&d8->GetTransform(), d8->GetBoundingVolume()));
@@ -388,7 +384,7 @@ GameObject* DiceRoller::AddD20(const Vector3& position, float height, float inve
 	return d20;
 }
 
-GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensions, Texture* tex,float inverseMass) {
+GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensions, Texture* tex, float inverseMass) {
 	GameObject* cube = new GameObject();
 
 	AABBVolume* volume = new AABBVolume(dimensions);
@@ -397,7 +393,7 @@ GameObject* DiceRoller::AddCubeToWorld(const Vector3& position, Vector3 dimensio
 	cube->GetTransform()
 		.SetPosition(position)
 		.SetScale(dimensions * 2);
-	
+
 	if (tex == nullptr) tex = basicTex;
 	cube->SetRenderObject(new RenderObject(&cube->GetTransform(), cubeMesh, tex, basicShader));
 	cube->SetPhysicsObject(new PhysicsObject(&cube->GetTransform(), cube->GetBoundingVolume()));
@@ -466,14 +462,14 @@ GameObject* DiceRoller::AddSphereToWorld(const Vector3& position, float radius, 
 	return sphere;
 }
 
-void DiceRoller::InitDiceTray() 
+void DiceRoller::InitDiceTray()
 {
-	Vector3 dimensions = { 15,2,15 };
-	GameObject* floor = AddFloorToWorld({0,0,0}, dimensions);
-	AddCubeToWorld({ 0,dimensions.y,dimensions.z - 1.0f}, { dimensions.x,3,1 },woodTex, 0);
-	AddCubeToWorld({ 0,dimensions.y,-dimensions.z+1.0f}, { dimensions.x,3,1 }, woodTex,0);
-	AddCubeToWorld({ dimensions.x-1.0f,dimensions.y,0 }, { 1,3,dimensions.z },woodTex, 0);
-	AddCubeToWorld({ -dimensions.x+1.0f,dimensions.y,0 }, { 1,3,dimensions.z },woodTex, 0);
+	Vector3 dimensions = { 10,2,10 };
+	GameObject* floor = AddFloorToWorld({ 0,0,0 }, dimensions);
+	AddCubeToWorld({ 0,dimensions.y,dimensions.z - 1.0f }, { dimensions.x,3,1 }, woodTex, 0);
+	AddCubeToWorld({ 0,dimensions.y,-dimensions.z + 1.0f }, { dimensions.x,3,1 }, woodTex, 0);
+	AddCubeToWorld({ dimensions.x - 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
+	AddCubeToWorld({ -dimensions.x + 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
 }
 
 /*
