@@ -65,6 +65,10 @@ namespace NCL::CSC8503 {
 			physicsObject = newObject;
 			physicsObject->useGravity = useGravity;
 		}
+		void SetName(std::string name)
+		{
+			this->name = name;
+		}
 
 		const std::string& GetName() const {
 			return name;

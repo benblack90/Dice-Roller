@@ -33,7 +33,7 @@ namespace NCL {
 
 			void InitCamera();
 			void UpdateKeys();
-
+			void SelectObject();
 			void InitWorld();
 
 			void InitDiceTray();
@@ -94,6 +94,7 @@ namespace NCL {
 
 			GameObject* objClosest = nullptr;
 			GameObject* selectedDice[MAX];
+			GameObject* rollingDice[MAX];
 		};
 	}
 }

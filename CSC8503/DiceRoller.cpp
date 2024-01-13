@@ -104,6 +104,7 @@ DiceRoller::~DiceRoller() {
 void DiceRoller::UpdateGame(float dt) {
 	world->GetMainCamera().UpdateCamera(dt);
 	UpdateKeys();
+	SelectObject();
 
 	world->UpdateWorld(dt);
 	renderer->Update(dt);
@@ -138,15 +139,19 @@ void DiceRoller::InitWorld() {
 	GameObject* dice = AddD4({ -14,0,-2 }, 1, 10);
 	dice->GetPhysicsObject()->useGravity = false;
 	dice->SetCollisionLayer(staticObj);
-	dice = AddD6({  -14,0,-4 }, { 0.5,0.5,0.5 }, 10);
+	dice->SetName("selD4");
+	dice = AddD6({ -14,0,-4 }, { 0.5,0.5,0.5 }, 10);
 	dice->GetPhysicsObject()->useGravity = false;
+	dice->SetName("selD6");
 	dice->SetCollisionLayer(staticObj);
-	dice = AddD8({  -14,0,-6}, 1, 10);
+	dice = AddD8({ -14,0,-6 }, 1, 10);
 	dice->GetPhysicsObject()->useGravity = false;
+	dice->SetName("selD8");
 	dice->SetCollisionLayer(staticObj);
 	dice = AddD20({ -14,0,-8 }, 1, 10);
 	dice->GetPhysicsObject()->useGravity = false;
 	dice->SetCollisionLayer(staticObj);
+	dice->SetName("selD20");
 }
 
 GameObject* DiceRoller::AddD4(const Vector3& position, float height, float inverseMass)
@@ -330,5 +335,39 @@ void DiceRoller::InitDiceTray()
 	AddCubeToWorld({ -dimensions.x + 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
 }
 
+void DiceRoller::SelectObject()
+{
+	if (Window::GetMouse()->ButtonPressed(NCL::MouseButtons::Left))
+	{
+		Ray ray = CollisionDetection::BuildRayFromMouse(world->GetMainCamera());
+		RayCollision closestCollision;
+		if (world->Raycast(ray, closestCollision, true))
+		{
+			GameObject* closest = (GameObject*)closestCollision.node;
+			AvailableDice dice = MAX;
+			if (closest->GetName() == "selD4")
+				dice = d4;
+			else if (closest->GetName() == "selD6")
+				dice = d6;
+			else if (closest->GetName() == "selD8")
+				dice = d8;
+			else if (closest->GetName() == "selD20")
+				dice = d20;
+			else
+				return;
 
 
+			//deselect if already present
+			if (selectedDice[dice])
+			{
+				selectedDice[dice]->GetRenderObject()->SetColour({ 1,1,1,1 });
+				selectedDice[dice] = nullptr;
+			}
+			else
+			{
+				selectedDice[dice] = closest;
+				selectedDice[dice]->GetRenderObject()->SetColour({ 0,1,0,1 });
+			}
+		}
+	}
+}

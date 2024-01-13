@@ -47,7 +47,6 @@ namespace NCL {
 			return tr.GetOrientation() * localVerts[index] + tr.GetPosition();
 
 		}
-
 		
 	protected:
 		float height;
