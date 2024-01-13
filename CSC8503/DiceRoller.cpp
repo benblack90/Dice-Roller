@@ -30,8 +30,7 @@ DiceRoller::DiceRoller() : controller(*Window::GetWindow()->GetKeyboard(), *Wind
 	physics = new PhysicsSystem(*world);
 
 	forceMagnitude = 10.0f;
-	useGravity = false;
-	inSelectionMode = false;
+	physics->UseGravity(true);
 
 	world->GetMainCamera().SetController(controller);
 
@@ -103,58 +102,8 @@ DiceRoller::~DiceRoller() {
 }
 
 void DiceRoller::UpdateGame(float dt) {
-	if (!inSelectionMode) {
-		world->GetMainCamera().UpdateCamera(dt);
-	}
-	if (lockedObject != nullptr) {
-		Vector3 objPos = lockedObject->GetTransform().GetPosition();
-		Vector3 camPos = objPos + lockedOffset;
-
-		Matrix4 temp = Matrix4::BuildViewMatrix(camPos, objPos, Vector3(0, 1, 0));
-
-		Matrix4 modelMat = temp.Inverse();
-
-		Quaternion q(modelMat);
-		Vector3 angles = q.ToEuler(); //nearly there now!
-
-		world->GetMainCamera().SetPosition(camPos);
-		world->GetMainCamera().SetPitch(angles.x);
-		world->GetMainCamera().SetYaw(angles.y);
-	}
-
+	world->GetMainCamera().UpdateCamera(dt);
 	UpdateKeys();
-
-	if (useGravity) {
-		Debug::Print("(G)ravity on", Vector2(5, 95), Debug::RED);
-	}
-	else {
-		Debug::Print("(G)ravity off", Vector2(5, 95), Debug::RED);
-	}
-
-	RayCollision closestCollision;
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::K) && selectionObject) {
-		Vector3 rayPos;
-		Vector3 rayDir;
-
-		rayDir = selectionObject->GetTransform().GetOrientation() * Vector3(0, 0, -1);
-
-		rayPos = selectionObject->GetTransform().GetPosition();
-
-		Ray r = Ray(rayPos, rayDir);
-
-		if (world->Raycast(r, closestCollision, true, selectionObject)) {
-			if (objClosest) {
-				objClosest->GetRenderObject()->SetColour(Vector4(1, 1, 1, 1));
-			}
-			objClosest = (GameObject*)closestCollision.node;
-
-			objClosest->GetRenderObject()->SetColour(Vector4(1, 0, 1, 1));
-		}
-	}
-
-
-	SelectObject();
-	MoveSelectedObject();
 
 	world->UpdateWorld(dt);
 	renderer->Update(dt);
@@ -167,108 +116,9 @@ void DiceRoller::UpdateGame(float dt) {
 void DiceRoller::UpdateKeys() {
 	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F1)) {
 		InitWorld(); //We can reset the simulation at any time with F1
-		selectionObject = nullptr;
-	}
-
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F2)) {
-		InitCamera(); //F2 will reset the camera to a specific default place
-	}
-
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::G)) {
-		useGravity = !useGravity; //Toggle gravity!
-		physics->UseGravity(useGravity);
-	}
-	//Running certain physics updates in a consistent order might cause some
-	//bias in the calculations - the same objects might keep 'winning' the constraint
-	//allowing the other one to stretch too much etc. Shuffling the order so that it
-	//is random every frame can help reduce such bias.
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F9)) {
-		world->ShuffleConstraints(true);
-	}
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F10)) {
-		world->ShuffleConstraints(false);
-	}
-
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F7)) {
-		world->ShuffleObjects(true);
-	}
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F8)) {
-		world->ShuffleObjects(false);
-	}
-
-	if (lockedObject) {
-		LockedObjectMovement();
-	}
-	else {
-		DebugObjectMovement();
 	}
 }
 
-void DiceRoller::LockedObjectMovement() {
-	Matrix4 view = world->GetMainCamera().BuildViewMatrix();
-	Matrix4 camWorld = view.Inverse();
-
-	Vector3 rightAxis = Vector3(camWorld.GetColumn(0)); //view is inverse of model!
-
-	//forward is more tricky -  camera forward is 'into' the screen...
-	//so we can take a guess, and use the cross of straight up, and
-	//the right axis, to hopefully get a vector that's good enough!
-
-	Vector3 fwdAxis = Vector3::Cross(Vector3(0, 1, 0), rightAxis);
-	fwdAxis.y = 0.0f;
-	fwdAxis.Normalise();
-
-
-	if (Window::GetKeyboard()->KeyDown(KeyCodes::UP)) {
-		selectionObject->GetPhysicsObject()->AddForce(fwdAxis);
-	}
-
-	if (Window::GetKeyboard()->KeyDown(KeyCodes::DOWN)) {
-		selectionObject->GetPhysicsObject()->AddForce(-fwdAxis);
-	}
-
-	if (Window::GetKeyboard()->KeyDown(KeyCodes::NEXT)) {
-		selectionObject->GetPhysicsObject()->AddForce(Vector3(0, -10, 0));
-	}
-}
-
-void DiceRoller::DebugObjectMovement() {
-	//If we've selected an object, we can manipulate it with some key presses
-	if (inSelectionMode && selectionObject) {
-		//Twist the selected object!
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::LEFT)) {
-			selectionObject->GetPhysicsObject()->AddTorque(Vector3(-10, 0, 0));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::RIGHT)) {
-			selectionObject->GetPhysicsObject()->AddTorque(Vector3(10, 0, 0));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::NUM7)) {
-			selectionObject->GetPhysicsObject()->AddTorque(Vector3(0, 10, 0));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::NUM8)) {
-			selectionObject->GetPhysicsObject()->AddTorque(Vector3(0, -10, 0));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::RIGHT)) {
-			selectionObject->GetPhysicsObject()->AddTorque(Vector3(10, 0, 0));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::UP)) {
-			selectionObject->GetPhysicsObject()->AddForce(Vector3(0, 0, -1));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::DOWN)) {
-			selectionObject->GetPhysicsObject()->AddForce(Vector3(0, 0, 1));
-		}
-
-		if (Window::GetKeyboard()->KeyDown(KeyCodes::NUM5)) {
-			selectionObject->GetPhysicsObject()->AddForce(Vector3(0, -10, 0));
-		}
-	}
-}
 
 void DiceRoller::InitCamera() {
 	world->GetMainCamera().SetNearPlane(0.1f);
@@ -285,10 +135,18 @@ void DiceRoller::InitWorld() {
 
 	InitDiceTray();
 
-	AddD4({ -20,0,-8 }, 1, 10);
-	AddD6({  -18,0,-6 }, { 0.5,0.5,0.5 }, 10);
-	AddD8({  -16,0,-4}, 1, 10);
-	AddD20({ -14,0,-2 }, 1, 10);
+	GameObject* dice = AddD4({ -14,0,-2 }, 1, 10);
+	dice->GetPhysicsObject()->useGravity = false;
+	dice->SetCollisionLayer(staticObj);
+	dice = AddD6({  -14,0,-4 }, { 0.5,0.5,0.5 }, 10);
+	dice->GetPhysicsObject()->useGravity = false;
+	dice->SetCollisionLayer(staticObj);
+	dice = AddD8({  -14,0,-6}, 1, 10);
+	dice->GetPhysicsObject()->useGravity = false;
+	dice->SetCollisionLayer(staticObj);
+	dice = AddD20({ -14,0,-8 }, 1, 10);
+	dice->GetPhysicsObject()->useGravity = false;
+	dice->SetCollisionLayer(staticObj);
 }
 
 GameObject* DiceRoller::AddD4(const Vector3& position, float height, float inverseMass)
@@ -472,89 +330,5 @@ void DiceRoller::InitDiceTray()
 	AddCubeToWorld({ -dimensions.x + 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
 }
 
-/*
-Every frame, this code will let you perform a raycast, to see if there's an object
-underneath the cursor, and if so 'select it' into a pointer, so that it can be
-manipulated later. Pressing Q will let you toggle between this behaviour and instead
-letting you move the camera around.
-
-*/
-bool DiceRoller::SelectObject() {
-	if (Window::GetKeyboard()->KeyPressed(KeyCodes::Q)) {
-		inSelectionMode = !inSelectionMode;
-		if (inSelectionMode) {
-			Window::GetWindow()->ShowOSPointer(true);
-			Window::GetWindow()->LockMouseToWindow(false);
-		}
-		else {
-			Window::GetWindow()->ShowOSPointer(false);
-			Window::GetWindow()->LockMouseToWindow(true);
-		}
-	}
-	if (inSelectionMode) {
-		Debug::Print("Press Q to change to camera mode!", Vector2(5, 85));
-
-		if (Window::GetMouse()->ButtonDown(NCL::MouseButtons::Left)) {
-			if (selectionObject) {	//set colour to deselected;
-				selectionObject->GetRenderObject()->SetColour(Vector4(1, 1, 1, 1));
-				selectionObject = nullptr;
-			}
-
-			Ray ray = CollisionDetection::BuildRayFromMouse(world->GetMainCamera());
-
-			RayCollision closestCollision;
-			if (world->Raycast(ray, closestCollision, true)) {
-				selectionObject = (GameObject*)closestCollision.node;
-
-				selectionObject->GetRenderObject()->SetColour(Vector4(0, 1, 0, 1));
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		if (Window::GetKeyboard()->KeyPressed(NCL::KeyCodes::L)) {
-			if (selectionObject) {
-				if (lockedObject == selectionObject) {
-					lockedObject = nullptr;
-				}
-				else {
-					lockedObject = selectionObject;
-				}
-			}
-		}
-	}
-	else {
-		Debug::Print("Press Q to change to select mode!", Vector2(5, 85));
-	}
-	return false;
-}
-
-/*
-If an object has been clicked, it can be pushed with the right mouse button, by an amount
-determined by the scroll wheel. In the first tutorial this won't do anything, as we haven't
-added linear motion into our physics system. After the second tutorial, objects will move in a straight
-line - after the third, they'll be able to twist under torque aswell.
-*/
-
-void DiceRoller::MoveSelectedObject() {
-	Debug::Print("Click Force:" + std::to_string(forceMagnitude), Vector2(5, 90));
-	forceMagnitude += Window::GetMouse()->GetWheelMovement() * 100.0f;
-
-	if (!selectionObject) {
-		return;//we haven't selected anything!
-	}
-	//Push the selected object!
-	if (Window::GetMouse()->ButtonPressed(NCL::MouseButtons::Right)) {
-		Ray ray = CollisionDetection::BuildRayFromMouse(world->GetMainCamera());
-
-		RayCollision closestCollision;
-		if (world->Raycast(ray, closestCollision, true)) {
-			if (closestCollision.node == selectionObject) {
-				selectionObject->GetPhysicsObject()->AddForceAtPosition(ray.GetDirection() * forceMagnitude, closestCollision.collidedAt);
-			}
-		}
-	}
-}
 
 

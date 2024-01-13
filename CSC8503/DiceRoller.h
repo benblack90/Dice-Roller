@@ -13,6 +13,16 @@ namespace NCL {
 	namespace CSC8503 {
 		class DiceRoller {
 		public:
+
+			enum AvailableDice
+			{
+				d4,
+				d6,
+				d8,
+				d20,
+				MAX
+			};
+
 			DiceRoller();
 			~DiceRoller();
 
@@ -28,10 +38,6 @@ namespace NCL {
 
 			void InitDiceTray();
 
-			bool SelectObject();
-			void MoveSelectedObject();
-			void DebugObjectMovement();
-			void LockedObjectMovement();
 
 			GameObject* AddFloorToWorld(const Vector3& position, const Vector3& dimensions);
 			GameObject* AddSphereToWorld(const Vector3& position, float radius, float inverseMass = 10.0f);
@@ -53,12 +59,7 @@ namespace NCL {
 
 			KeyboardMouseController controller;
 
-			bool useGravity;
-			bool inSelectionMode;
-
 			float		forceMagnitude;
-
-			GameObject* selectionObject = nullptr;
 
 			Mesh* capsuleMesh = nullptr;
 			Mesh* cubeMesh = nullptr;
@@ -92,6 +93,7 @@ namespace NCL {
 			}
 
 			GameObject* objClosest = nullptr;
+			GameObject* selectedDice[MAX];
 		};
 	}
 }
