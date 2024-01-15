@@ -30,6 +30,7 @@ DiceRoller::DiceRoller() : controller(*Window::GetWindow()->GetKeyboard(), *Wind
 	physics = new PhysicsSystem(*world);
 
 	forceMagnitude = 10.0f;
+	diceActive = false;
 	physics->UseGravity(true);
 
 	world->GetMainCamera().SetController(controller);
@@ -105,6 +106,7 @@ void DiceRoller::UpdateGame(float dt) {
 	world->GetMainCamera().UpdateCamera(dt);
 	UpdateKeys();
 	SelectObject();
+	UpdateActiveDice();
 
 	world->UpdateWorld(dt);
 	renderer->Update(dt);
@@ -117,6 +119,21 @@ void DiceRoller::UpdateGame(float dt) {
 void DiceRoller::UpdateKeys() {
 	if (Window::GetKeyboard()->KeyPressed(KeyCodes::F1)) {
 		InitWorld(); //We can reset the simulation at any time with F1
+	}
+	if (Window::GetKeyboard()->KeyPressed(KeyCodes::SPACE))
+	{
+		//exit early and do nothing if no dice are selected
+		for (int i = d4; i < MAX; i++)
+		{
+			if (selectedDice[i] != nullptr)
+				break;
+			if (i == MAX - 1)
+				return;
+		}
+		//otherwise ...
+		diceActive = !diceActive;
+		UpdateActiveDice();
+		RollDice();
 	}
 }
 
@@ -136,22 +153,49 @@ void DiceRoller::InitWorld() {
 
 	InitDiceTray();
 
-	GameObject* dice = AddD4({ -14,0,-2 }, 1, 10);
+	//selection menu dice
+	GameObject* dice = AddD4({ -14,0,-2 }, 1, 0);
 	dice->GetPhysicsObject()->useGravity = false;
 	dice->SetCollisionLayer(staticObj);
+	dice->GetRenderObject()->SetColour({ 1,1,1,0.5 });
 	dice->SetName("selD4");
-	dice = AddD6({ -14,0,-4 }, { 0.5,0.5,0.5 }, 10);
+	dice = AddD6({ -14,0,-4 }, { 0.5,0.5,0.5 }, 0);
 	dice->GetPhysicsObject()->useGravity = false;
+	dice->GetRenderObject()->SetColour({ 1,1,1,0.5 });
 	dice->SetName("selD6");
 	dice->SetCollisionLayer(staticObj);
-	dice = AddD8({ -14,0,-6 }, 1, 10);
+	dice = AddD8({ -14,0,-6 }, 1, 0);
 	dice->GetPhysicsObject()->useGravity = false;
+	dice->GetRenderObject()->SetColour({ 1,1,1,0.5 });
 	dice->SetName("selD8");
 	dice->SetCollisionLayer(staticObj);
-	dice = AddD20({ -14,0,-8 }, 1, 10);
+	dice = AddD20({ -14,0,-8 }, 1, 0);
 	dice->GetPhysicsObject()->useGravity = false;
+	dice->GetRenderObject()->SetColour({ 1,1,1,0.5 });
 	dice->SetCollisionLayer(staticObj);
 	dice->SetName("selD20");
+
+	//rolling dice
+	rollingDice[d4] = AddD4({0,5,0}, 1, 10);
+	rollingDice[d4]->GetPhysicsObject()->useGravity = false;
+	rollingDice[d4]->SetActive(false);
+	rollingDice[d4]->GetPhysicsObject()->SetFrameLinearDampingCoeff(1.0f);
+	rollingDice[d4]->GetPhysicsObject()->SetFrameAngularDampingCoeff(1.0f);
+	rollingDice[d6] = AddD6({ 0,5,2 }, {0.5,0.5,0.5}, 10);
+	rollingDice[d6]->GetPhysicsObject()->useGravity = false;
+	rollingDice[d6]->SetActive(false);
+	rollingDice[d6]->GetPhysicsObject()->SetFrameLinearDampingCoeff(1.0f);
+	rollingDice[d6]->GetPhysicsObject()->SetFrameAngularDampingCoeff(1.0f);
+	rollingDice[d8] = AddD8({ 0,5,4 }, 1, 10);
+	rollingDice[d8]->GetPhysicsObject()->useGravity = false;
+	rollingDice[d8]->SetActive(false);
+	rollingDice[d8]->GetPhysicsObject()->SetFrameLinearDampingCoeff(1.0f);
+	rollingDice[d8]->GetPhysicsObject()->SetFrameAngularDampingCoeff(1.0f);
+	rollingDice[d20] = AddD20({ 0,5,6 }, 1, 10);
+	rollingDice[d20]->GetPhysicsObject()->useGravity = false;
+	rollingDice[d20]->SetActive(false);
+	rollingDice[d20]->GetPhysicsObject()->SetFrameLinearDampingCoeff(1.0f);
+	rollingDice[d20]->GetPhysicsObject()->SetFrameAngularDampingCoeff(1.0f);
 }
 
 GameObject* DiceRoller::AddD4(const Vector3& position, float height, float inverseMass)
@@ -335,6 +379,59 @@ void DiceRoller::InitDiceTray()
 	AddCubeToWorld({ -dimensions.x + 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
 }
 
+void DiceRoller::UpdateActiveDice()
+{
+	if (!diceActive)
+	{
+		for (int i = d4; i < MAX; i++)
+		{
+			rollingDice[i]->GetPhysicsObject()->useGravity = false;
+			rollingDice[i]->SetActive(false);
+			ResetDicePositions();
+		}
+	}
+	if (diceActive)
+	{
+		for (int i = d4; i < MAX; i++)
+		{
+			if (selectedDice[i] != nullptr)
+			{
+				rollingDice[i]->SetActive(true);
+				rollingDice[i]->GetPhysicsObject()->useGravity = true;
+			}
+			else
+			{
+				rollingDice[i]->SetActive(false);
+			}
+		}
+	}
+	
+}
+
+void DiceRoller::ResetDicePositions()
+{
+
+	rollingDice[d4]->GetTransform().SetPosition(d4Start);
+	rollingDice[d6]->GetTransform().SetPosition(d6Start);
+	rollingDice[d8]->GetTransform().SetPosition(d8Start);
+	rollingDice[d20]->GetTransform().SetPosition(d20Start);
+	
+}
+
+void DiceRoller::RollDice()
+{
+	for (int i = d4; i < MAX; i++)
+	{
+		if (rollingDice[i]->IsActive())
+		{
+			//random torque, and +/- 15 degrees from positive x direction
+			rollingDice[i]->GetPhysicsObject()->AddTorque({RandomValue(0,50), RandomValue(0,50),RandomValue(0,50) });
+			Vector3 roll = Matrix4::Rotation(RandomValue(-40,40),{0,1,0}) * Vector3(1, 0, 0) * 200;
+			rollingDice[i]->GetPhysicsObject()->AddForce({roll});
+		}
+	}
+}
+
 void DiceRoller::SelectObject()
 {
 	if (Window::GetMouse()->ButtonPressed(NCL::MouseButtons::Left))
@@ -360,13 +457,19 @@ void DiceRoller::SelectObject()
 			//deselect if already present
 			if (selectedDice[dice])
 			{
-				selectedDice[dice]->GetRenderObject()->SetColour({ 1,1,1,1 });
+				selectedDice[dice]->GetRenderObject()->SetColour({ 1,1,1,0.5 });
+				selectedDice[dice]->GetTransform().SetPosition(
+					selectedDice[dice]->GetTransform().GetPosition() - Vector3(2, 2, 0)
+				);
 				selectedDice[dice] = nullptr;
 			}
 			else
 			{
 				selectedDice[dice] = closest;
-				selectedDice[dice]->GetRenderObject()->SetColour({ 0,1,0,1 });
+				selectedDice[dice]->GetRenderObject()->SetColour({ 1,1,1,1 });
+				selectedDice[dice]->GetTransform().SetPosition(
+					selectedDice[dice]->GetTransform().GetPosition() + Vector3(2, 2, 0)
+				);
 			}
 		}
 	}

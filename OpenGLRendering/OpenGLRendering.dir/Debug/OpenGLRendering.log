@@ -1,4 +1,4 @@
-﻿  Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/OpenGLRendering/CMakeLists.txt
+﻿  Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/OpenGLRendering/CMakeLists.txt
   cmake_pch.cxx
   OGLTexture.h
   OGLShader.h
@@ -12,4 +12,4 @@
   OGLComputeShader.cpp
   gl.h
   gl.c
-  OpenGLRendering.vcxproj -> C:\Users\a8038295\source\repos\Dice-Roller\OpenGLRendering\Debug\OpenGLRendering.lib
+  OpenGLRendering.vcxproj -> C:\Users\Ben\source\repos\Dice Roller\OpenGLRendering\Debug\OpenGLRendering.lib

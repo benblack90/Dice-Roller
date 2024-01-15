@@ -14,9 +14,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4C3A0999-DAF3-324F-BA03-50E2B5CB9889}</ProjectGuid>
+    <ProjectGuid>{2F07D8FC-9944-3F32-837C-7F053F5BCB6C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>NCLCoreClasses</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -42,11 +42,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NCLCoreClasses.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NCLCoreClasses</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NCLCoreClasses.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NCLCoreClasses</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
@@ -61,16 +61,16 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/NCLCoreClasses.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/NCLCoreClasses.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ASSETROOTLOCATION="C:/Users/a8038295/source/repos/Dice-Roller/Assets/";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ASSETROOTLOCATION="C:/Users/Ben/source/repos/Dice Roller/Assets/";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ASSETROOTLOCATION=\"C:/Users/a8038295/source/repos/Dice-Roller/Assets/\";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ASSETROOTLOCATION=\"C:/Users/Ben/source/repos/Dice Roller/Assets/\";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
     </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -92,18 +92,18 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/NCLCoreClasses.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/NCLCoreClasses.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ASSETROOTLOCATION="C:/Users/a8038295/source/repos/Dice-Roller/Assets/";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ASSETROOTLOCATION="C:/Users/Ben/source/repos/Dice Roller/Assets/";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ASSETROOTLOCATION=\"C:/Users/a8038295/source/repos/Dice-Roller/Assets/\";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ASSETROOTLOCATION=\"C:/Users/Ben/source/repos/Dice Roller/Assets/\";NOMINMAX;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
     </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -118,11 +118,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\bin\cmake.exe -SC:/Users/a8038295/source/repos/Dice-Roller -BC:/Users/a8038295/source/repos/Dice-Roller --check-stamp-file C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Ben/source/repos/Dice Roller" "-BC:/Users/Ben/source/repos/Dice Roller" --check-stamp-file "C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -131,11 +131,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Users\a8038295\source\cmake-3.28.0-rc5-windows-x86_64\cmake-3.28.0-rc5-windows-x86_64\bin\cmake.exe -SC:/Users/a8038295/source/repos/Dice-Roller -BC:/Users/a8038295/source/repos/Dice-Roller --check-stamp-file C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Ben/source/repos/Dice Roller" "-BC:/Users/Ben/source/repos/Dice Roller" --check-stamp-file "C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -144,268 +144,268 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\CMakeFiles\NCLCoreClasses.dir\cmake_pch.cxx">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\CMakeFiles\NCLCoreClasses.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/NCLCoreClasses.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/NCLCoreClasses.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/NCLCoreClasses.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/NCLCoreClasses.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Assets.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Assets.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Assets.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\SimpleFont.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Assets.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\SimpleFont.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\SimpleFont.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\TextureLoader.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\SimpleFont.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\TextureLoader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\TextureLoader.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\TextureWriter.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\TextureLoader.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\TextureWriter.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\TextureWriter.h" />
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Camera.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Maths.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\TextureWriter.h" />
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Camera.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Maths.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Maths.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Matrix2.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Maths.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Matrix2.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Matrix2.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Matrix3.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Matrix2.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Matrix3.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Matrix3.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Matrix4.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Matrix3.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Matrix4.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Matrix4.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Plane.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Matrix4.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Plane.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Plane.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Frustum.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Plane.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Frustum.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Frustum.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Quaternion.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Frustum.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Quaternion.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Quaternion.h" />
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\NewVector.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector2.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Quaternion.h" />
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\NewVector.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector2.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector2.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector3.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector2.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector3.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector3.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector4.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector3.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector4.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector4.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector2i.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector4.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector2i.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector2i.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector3I.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector2i.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector3I.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector3I.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector4I.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector3I.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector4I.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Vector4I.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\MeshAnimation.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Vector4I.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\MeshAnimation.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\MeshAnimation.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Mesh.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\MeshAnimation.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Mesh.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Mesh.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\MshLoader.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Mesh.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\MshLoader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\MshLoader.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\MeshMaterial.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\MshLoader.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\MeshMaterial.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\MeshMaterial.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\RendererBase.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\MeshMaterial.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\RendererBase.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\RendererBase.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Shader.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\RendererBase.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Shader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Shader.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Texture.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Shader.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Texture.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Texture.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Camera.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Texture.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Camera.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\GameTimer.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\GameTimer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\GameTimer.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Keyboard.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\GameTimer.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Keyboard.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Keyboard.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Mouse.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Keyboard.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Mouse.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Mouse.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Window.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Mouse.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Window.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Window.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Controller.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Window.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Controller.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Controller.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\KeyboardMouseController.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Controller.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\KeyboardMouseController.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\KeyboardMouseController.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Win32Keyboard.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\KeyboardMouseController.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Win32Keyboard.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Win32Keyboard.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Win32Mouse.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Win32Keyboard.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Win32Mouse.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Win32Mouse.h" />
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Win32Window.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Win32Mouse.h" />
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Win32Window.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/a8038295/source/repos/Dice-Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Ben/source/repos/Dice Roller/NCLCoreClasses/CMakeFiles/NCLCoreClasses.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
     </ClCompile>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\Win32Window.h" />
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\CMakeFiles\NCLCoreClasses.dir\Debug\cmake_pch.hxx" />
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\NCLCoreClasses\CMakeFiles\NCLCoreClasses.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\Win32Window.h" />
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\CMakeFiles\NCLCoreClasses.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\NCLCoreClasses\CMakeFiles\NCLCoreClasses.dir\Release\cmake_pch.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\a8038295\source\repos\Dice-Roller\ZERO_CHECK.vcxproj">
-      <Project>{2CA6FB99-1469-352B-B0F4-BD978F8D128C}</Project>
+    <ProjectReference Include="C:\Users\Ben\source\repos\Dice Roller\ZERO_CHECK.vcxproj">
+      <Project>{FE9B2181-E61D-3DB3-AA4D-F51B9F98360C}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

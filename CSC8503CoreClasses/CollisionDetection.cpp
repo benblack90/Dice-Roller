@@ -6,6 +6,8 @@
 #include "Window.h"
 #include "Maths.h"
 #include "Debug.h"
+#include "D4Volume.h"
+#include "D8Volume.h"
 #include "D20Volume.h"
 
 using namespace NCL;
@@ -42,6 +44,16 @@ bool CollisionDetection::RayIntersection(const Ray& r, GameObject& object, RayCo
 	case VolumeType::AABB:		hasCollided = RayAABBIntersection(r, worldTransform, (const AABBVolume&)*volume, collision); break;
 	case VolumeType::OBB:		hasCollided = RayOBBIntersection(r, worldTransform, (const OBBVolume&)*volume, collision); break;
 	case VolumeType::Sphere:	hasCollided = RaySphereIntersection(r, worldTransform, (const SphereVolume&)*volume, collision); break;
+	case VolumeType::D4_Dice:
+	{
+		D4Volume* vol = (D4Volume*)object.GetBoundingVolume();
+		hasCollided = RaySphereIntersection(r, worldTransform, SphereVolume(vol->GetHeight() / 2), collision); break;
+	}
+	case VolumeType::D8_Dice:
+	{
+		D8Volume* vol = (D8Volume*)object.GetBoundingVolume();
+		hasCollided = RaySphereIntersection(r, worldTransform, SphereVolume(vol->GetHeight()), collision); break;
+	}
 	case VolumeType::D20_Dice: 
 	{
 		D20Volume* vol = (D20Volume*)object.GetBoundingVolume();

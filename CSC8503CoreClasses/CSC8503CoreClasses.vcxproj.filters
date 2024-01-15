@@ -1,294 +1,294 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CMakeFiles\CSC8503CoreClasses.dir\cmake_pch.cxx">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CMakeFiles\CSC8503CoreClasses.dir\cmake_pch.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\Debug.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\Debug.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameObject.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameObject.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameWorld.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameWorld.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\RenderObject.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\RenderObject.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\Transform.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\Transform.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\Debug.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameObject.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameWorld.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\RenderObject.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\RenderObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\Transform.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\Transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourAction.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourAction.h">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourNode.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourNode.h">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourNodeWithChildren.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourNodeWithChildren.h">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourSelector.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourSelector.h">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourSelector.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourSelector.cpp">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourSequence.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourSequence.h">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\BehaviourSequence.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\BehaviourSequence.cpp">
       <Filter>AI\Behaviour Trees</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PushdownMachine.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PushdownMachine.h">
       <Filter>AI\Pushdown Automata</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PushdownMachine.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PushdownMachine.cpp">
       <Filter>AI\Pushdown Automata</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PushdownState.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PushdownState.h">
       <Filter>AI\Pushdown Automata</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PushdownState.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PushdownState.cpp">
       <Filter>AI\Pushdown Automata</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\State.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\State.h">
       <Filter>AI\State Machine</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\StateMachine.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\StateMachine.h">
       <Filter>AI\State Machine</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\StateMachine.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\StateMachine.cpp">
       <Filter>AI\State Machine</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\StateTransition.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\StateTransition.h">
       <Filter>AI\State Machine</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NavigationGrid.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NavigationGrid.h">
       <Filter>AI\Pathfinding</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NavigationGrid.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NavigationGrid.cpp">
       <Filter>AI\Pathfinding</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NavigationMesh.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NavigationMesh.cpp">
       <Filter>AI\Pathfinding</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NavigationMesh.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NavigationMesh.h">
       <Filter>AI\Pathfinding</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NavigationMap.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NavigationMap.h">
       <Filter>AI\Pathfinding</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NavigationPath.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NavigationPath.h">
       <Filter>AI\Pathfinding</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\AABBVolume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\AABBVolume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CapsuleVolume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CapsuleVolume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CapsuleVolume.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CapsuleVolume.cpp">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CollisionDetection.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CollisionDetection.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CollisionDetection.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CollisionDetection.cpp">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CollisionVolume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CollisionVolume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\D4Volume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\D4Volume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\D8Volume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\D8Volume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\D20Volume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\D20Volume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\OBBVolume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\OBBVolume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\QuadTree.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\QuadTree.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\QuadTree.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\QuadTree.cpp">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\Ray.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\Ray.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\SphereVolume.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\SphereVolume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameClient.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameClient.h">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameClient.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameClient.cpp">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameServer.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameServer.h">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\GameServer.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\GameServer.cpp">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NetworkBase.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NetworkBase.h">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NetworkBase.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NetworkBase.cpp">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NetworkObject.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NetworkObject.h">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NetworkObject.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NetworkObject.cpp">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NetworkState.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NetworkState.h">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\NetworkState.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\NetworkState.cpp">
       <Filter>Networking</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\Constraint.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\Constraint.h">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PositionConstraint.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PositionConstraint.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PositionConstraint.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PositionConstraint.h">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\OrientationConstraint.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\OrientationConstraint.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\OrientationConstraint.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\OrientationConstraint.h">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PhysicsObject.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PhysicsObject.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PhysicsObject.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PhysicsObject.h">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PhysicsSystem.cpp">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PhysicsSystem.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\PhysicsSystem.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\PhysicsSystem.h">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\callbacks.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\callbacks.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\list.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\list.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\list.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\list.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\protocol.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\protocol.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\protocol.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\protocol.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\win32.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\win32.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\win32.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\win32.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\enet.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\enet.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\time.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\time.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\types.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\types.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\utility.h">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\utility.h">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\compress.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\compress.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\host.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\host.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\packet.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\packet.c">
       <Filter>eNet</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\enet\peer.c">
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\enet\peer.c">
       <Filter>eNet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CMakeFiles\CSC8503CoreClasses.dir\Debug\cmake_pch.hxx">
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CMakeFiles\CSC8503CoreClasses.dir\Debug\cmake_pch.hxx">
       <Filter>Precompile Header File</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CMakeFiles\CSC8503CoreClasses.dir\Release\cmake_pch.hxx">
+    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CMakeFiles\CSC8503CoreClasses.dir\Release\cmake_pch.hxx">
       <Filter>Precompile Header File</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\a8038295\source\repos\Dice-Roller\CSC8503CoreClasses\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="AI">
-      <UniqueIdentifier>{FD4FAAF5-5005-35A4-88EA-4110A17B4DA6}</UniqueIdentifier>
+      <UniqueIdentifier>{B4A45D87-33CF-3D25-A5D7-6F5C4CB15BD4}</UniqueIdentifier>
     </Filter>
     <Filter Include="AI\Behaviour Trees">
-      <UniqueIdentifier>{98B7DC0E-8C96-3BE7-BA73-270219ABB578}</UniqueIdentifier>
+      <UniqueIdentifier>{012E26A0-733F-3DAA-9C3A-C7044F8DF3A2}</UniqueIdentifier>
     </Filter>
     <Filter Include="AI\Pathfinding">
-      <UniqueIdentifier>{F3A3196E-79FF-3095-9DCF-CD0A01AFE8CD}</UniqueIdentifier>
+      <UniqueIdentifier>{E68AFEDB-0915-3636-97C7-667B2B403857}</UniqueIdentifier>
     </Filter>
     <Filter Include="AI\Pushdown Automata">
-      <UniqueIdentifier>{EFD9D5AB-C197-3A20-A46C-61CD0069D5FA}</UniqueIdentifier>
+      <UniqueIdentifier>{98954FA8-B255-3443-9CA9-C49B8CD8B734}</UniqueIdentifier>
     </Filter>
     <Filter Include="AI\State Machine">
-      <UniqueIdentifier>{81EA2D3F-569E-3259-B6D3-9FF286C8F680}</UniqueIdentifier>
+      <UniqueIdentifier>{17604BA8-99B7-3E83-9F4F-F48F6437BEF2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Collision Detection">
-      <UniqueIdentifier>{42ACCB42-68D2-31F4-910A-B857244567C5}</UniqueIdentifier>
+      <UniqueIdentifier>{CEDE3EB4-2DB3-33EF-B855-2BE5ACCAB2B0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{70325260-D742-3697-BA9F-67946828A381}</UniqueIdentifier>
+      <UniqueIdentifier>{721080F8-811F-3672-A7B1-153809B56529}</UniqueIdentifier>
     </Filter>
     <Filter Include="Networking">
-      <UniqueIdentifier>{5978A67C-4035-3AD3-B356-BA7CB93C8FD3}</UniqueIdentifier>
+      <UniqueIdentifier>{5213AF3D-866B-3A4B-9B23-355A348B078E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Physics">
-      <UniqueIdentifier>{D2700F07-F123-34C1-917E-A8CC86E70FCA}</UniqueIdentifier>
+      <UniqueIdentifier>{25ED7F74-2A60-329E-8376-CD2AC072CB69}</UniqueIdentifier>
     </Filter>
     <Filter Include="Precompile Header File">
-      <UniqueIdentifier>{C73C6E94-958E-3E96-A73B-4321126C5BC8}</UniqueIdentifier>
+      <UniqueIdentifier>{9AF5B58F-C214-3A7D-8E29-4E1C905F956E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{9F721815-3960-3A9D-9DC9-03EAFC38197D}</UniqueIdentifier>
+      <UniqueIdentifier>{22877A88-E54C-3C31-88A9-C1FF576C38A0}</UniqueIdentifier>
     </Filter>
     <Filter Include="eNet">
-      <UniqueIdentifier>{4207BB52-2C17-3576-8D6C-673CF88EB901}</UniqueIdentifier>
+      <UniqueIdentifier>{91415342-F556-36ED-8DAE-B1057E937B27}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
