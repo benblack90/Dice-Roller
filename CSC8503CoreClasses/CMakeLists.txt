@@ -50,6 +50,7 @@ set(Collision_Detection
     "CollisionDetection.cpp"
     "CollisionVolume.h"
     "D4Volume.h"
+    "D6Volume.h"
     "D8Volume.h"
     "D20Volume.h"
     "OBBVolume.h"

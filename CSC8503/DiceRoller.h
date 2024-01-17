@@ -42,6 +42,7 @@ namespace NCL {
 			void ResetDicePositions();
 			void RollDice();
 			void HaltStoppedDice();
+			void DisplayDiceResults();
 
 
 			GameObject* AddFloorToWorld(const Vector3& position, const Vector3& dimensions);
@@ -88,10 +89,10 @@ namespace NCL {
 			Mesh* d12Mesh = nullptr;
 			Mesh* d20Mesh = nullptr;
 
-			Vector3 d4Start = { 0,5,0 };
-			Vector3 d6Start = { 0,5,2 };
-			Vector3 d8Start = { 0,5,4 };
-			Vector3 d20Start = { 0,5,6 };
+			Vector3 d4Start = {-5,5,-4 };
+			Vector3 d6Start = { -5,5,-2 };
+			Vector3 d8Start = { -5,5,0 };
+			Vector3 d20Start = { -5,5,2 };
 
 			bool diceActive;
 

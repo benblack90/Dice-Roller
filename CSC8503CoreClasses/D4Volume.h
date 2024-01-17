@@ -47,6 +47,23 @@ namespace NCL {
 			return tr.GetOrientation() * localVerts[index] + tr.GetPosition();
 
 		}
+
+		short GetCornerResult(const NCL::CSC8503::Transform& tr) const
+		{
+			Vector3 localUp = (tr.GetOrientation().Conjugate() * Vector3(0,1,0)).Normalised();
+			float dotMax = FLT_MIN;
+			int index = -1;
+			for (int i = 0; i < MAX; i++)
+			{
+				if (Vector3::Dot(localUp, localVerts[i].Normalised()) > dotMax)
+				{
+					dotMax = Vector3::Dot(localUp, localVerts[i].Normalised());
+					index = i;
+				}
+			}
+			return index + 1;
+
+		}
 		
 	protected:
 		float height;

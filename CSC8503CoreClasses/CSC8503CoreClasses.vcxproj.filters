@@ -118,6 +118,9 @@
     <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\D4Volume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\D6Volume.h">
+      <Filter>Collision Detection</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503CoreClasses\D8Volume.h">
       <Filter>Collision Detection</Filter>
     </ClCompile>

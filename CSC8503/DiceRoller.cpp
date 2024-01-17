@@ -8,6 +8,7 @@
 #include "OrientationConstraint.h"
 #include "StateGameObject.h"
 #include "D4Volume.h"
+#include "D6Volume.h"
 #include "D8Volume.h"
 #include "D20Volume.h"
 
@@ -107,6 +108,8 @@ void DiceRoller::UpdateGame(float dt) {
 	UpdateKeys();
 	SelectObject();
 	HaltStoppedDice();
+	DisplayDiceResults();
+
 
 	world->UpdateWorld(dt);
 	renderer->Update(dt);
@@ -141,14 +144,11 @@ void DiceRoller::UpdateKeys() {
 void DiceRoller::InitCamera() {
 	world->GetMainCamera().SetNearPlane(0.1f);
 	world->GetMainCamera().SetFarPlane(500.0f);
-	/*
+
 	world->GetMainCamera().SetPitch(-40.0f);
 	world->GetMainCamera().SetYaw(315.0f);
 	world->GetMainCamera().SetPosition(Vector3(-15, 20, 15));
-	*/
-	world->GetMainCamera().SetPitch(0);
-	world->GetMainCamera().SetYaw(0);
-	world->GetMainCamera().SetPosition(Vector3(0, 0, 10));
+
 	lockedObject = nullptr;
 }
 
@@ -156,7 +156,7 @@ void DiceRoller::InitWorld() {
 	world->ClearAndErase();
 	physics->Clear();
 
-	//InitDiceTray();
+	InitDiceTray();
 
 	//selection menu dice
 	GameObject* dice = AddD4({ -14,0,-2 }, 1, 0);
@@ -180,26 +180,13 @@ void DiceRoller::InitWorld() {
 	dice->SetCollisionLayer(staticObj);
 	dice->SetName("selD20");
 
-	D20Volume* d20v = (D20Volume*) dice->GetBoundingVolume();
-	dice = AddD20({0,0,0 }, 1, 0);
-	dice->GetPhysicsObject()->useGravity = false;
-	dice->GetRenderObject()->SetColour({ 1,1,1,1 });
-	dice->SetCollisionLayer(staticObj);
-	dice->SetName("selD20");
-	/*
-	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[8], {1,0,0,1}, 12000.f);
-	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[2], { 1,1,0,1 }, 12000.f);
-	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[6], { 1,1,1,1 }, 12000.f);
-
-	Debug::DrawLine({ 0,0,0 }, d20v->faceNormals[11]*100, {1,1,1,1}, 12000.f);
-	*/
 	//rolling dice
-	rollingDice[d4] = AddD4({0,5,0}, 1, 10);
+	rollingDice[d4] = AddD4({ 0,5,0 }, 1, 10);
 	rollingDice[d4]->GetPhysicsObject()->useGravity = false;
 	rollingDice[d4]->SetActive(false);
 	rollingDice[d4]->GetPhysicsObject()->SetFrameLinearDampingCoeff(1.0f);
 	rollingDice[d4]->GetPhysicsObject()->SetFrameAngularDampingCoeff(1.0f);
-	rollingDice[d6] = AddD6({ 0,5,2 }, {0.5,0.5,0.5}, 10);
+	rollingDice[d6] = AddD6({ 0,5,2 }, { 0.5,0.5,0.5 }, 10);
 	rollingDice[d6]->GetPhysicsObject()->useGravity = false;
 	rollingDice[d6]->SetActive(false);
 	rollingDice[d6]->GetPhysicsObject()->SetFrameLinearDampingCoeff(1.0f);
@@ -239,12 +226,13 @@ GameObject* DiceRoller::AddD4(const Vector3& position, float height, float inver
 GameObject* DiceRoller::AddD6(const Vector3& position, Vector3 dimensions, float inverseMass)
 {
 	GameObject* d6 = new GameObject();
-	OBBVolume* volume = new OBBVolume(dimensions);
+	D6Volume* volume = new D6Volume(dimensions);
 	d6->SetBoundingVolume((CollisionVolume*)volume);
 
 	d6->GetTransform()
 		.SetPosition(position)
-		.SetScale(dimensions * 2);
+		//this adjustment here is due to the size of the d6 mesh: its base has side length sqrt(2), so multiplying it by sqrt(2)/2 gets us back to 1
+		.SetScale(dimensions * (sqrt(2) / 2) * 2);
 
 
 	d6->SetRenderObject(new RenderObject(&d6->GetTransform(), d6Mesh, d6Tex, basicShader));
@@ -268,8 +256,7 @@ GameObject* DiceRoller::AddD8(const Vector3& position, float height, float inver
 
 	d8->GetTransform()
 		.SetScale(d8Size)
-		.SetPosition(position)
-		.SetOrientation(Quaternion::AxisAngleToQuaterion({ 0.7,0.7,0.7 }, 20));
+		.SetPosition(position);
 
 	d8->SetRenderObject(new RenderObject(&d8->GetTransform(), d8Mesh, d8Tex, basicShader));
 	d8->SetPhysicsObject(new PhysicsObject(&d8->GetTransform(), d8->GetBoundingVolume()));
@@ -420,22 +407,22 @@ void DiceRoller::UpdateActiveDice()
 			}
 			else
 			{
-				rollingDice[i]->SetActive(false);				
+				rollingDice[i]->SetActive(false);
 			}
 		}
 	}
-	
+
 }
 
 void DiceRoller::HaltStoppedDice()
 {
 	for (int i = d4; i < MAX; i++)
 	{
-		if (diceActive 
+		if (diceActive
 			&& rollingDice[i]->GetCollisionLayer() != staticObj
-			&& rollingDice[i]->GetPhysicsObject()->GetForce().LengthSquared() <=0
-			&& rollingDice[i]->GetPhysicsObject()->GetLinearVelocity().LengthSquared() < 0.015f
-			&& rollingDice[i]->GetPhysicsObject()->GetAngularVelocity().LengthSquared() < 0.015f)
+			&& rollingDice[i]->GetPhysicsObject()->GetForce().LengthSquared() <= 0
+			&& rollingDice[i]->GetPhysicsObject()->GetLinearVelocity().LengthSquared() < 0.02f
+			&& rollingDice[i]->GetPhysicsObject()->GetAngularVelocity().LengthSquared() < 0.02f)
 		{
 			rollingDice[i]->GetPhysicsObject()->ClearForces();
 			rollingDice[i]->GetPhysicsObject()->SetAngularVelocity({ 0,0,0 });
@@ -444,6 +431,37 @@ void DiceRoller::HaltStoppedDice()
 			rollingDice[i]->GetPhysicsObject()->useGravity = false;
 		}
 	}
+}
+
+void DiceRoller::DisplayDiceResults()
+{
+	for (int i = 0; i < MAX; i++) if (rollingDice[i]->GetCollisionLayer() != staticObj) return;
+
+	if (selectedDice[d4] != nullptr)
+	{
+		D4Volume* d4v = (D4Volume*)rollingDice[d4]->GetBoundingVolume();
+		std::string d4Res = std::to_string(d4v->GetCornerResult(rollingDice[d4]->GetTransform()));
+		Debug::Print(d4Res, { 5,4 });
+	}
+	if (selectedDice[d6] != nullptr)
+	{
+		D6Volume* d6v = (D6Volume*)rollingDice[d6]->GetBoundingVolume();
+		std::string d6Res = std::to_string(d6v->GetFaceResult(rollingDice[d6]->GetTransform()));
+		Debug::Print(d6Res, { 5,8 });
+	}
+	if (selectedDice[d8] != nullptr)
+	{
+		D8Volume* d8v = (D8Volume*)rollingDice[d8]->GetBoundingVolume();
+		std::string d8Res = std::to_string(d8v->GetFaceResult(rollingDice[d8]->GetTransform()));
+		Debug::Print(d8Res, { 5,12 });
+	}
+	if (selectedDice[d20] != nullptr)
+	{
+		D20Volume* d20v = (D20Volume*)rollingDice[d20]->GetBoundingVolume();
+		std::string d20Res = std::to_string(d20v->GetFaceResult(rollingDice[d20]->GetTransform()));
+		Debug::Print(d20Res, { 5,16 });
+	}
+
 	
 }
 
@@ -455,7 +473,7 @@ void DiceRoller::ResetDicePositions()
 	rollingDice[d8]->GetTransform().SetPosition(d8Start);
 	rollingDice[d20]->GetTransform().SetPosition(d20Start);
 
-	
+
 }
 
 void DiceRoller::RollDice()
@@ -465,9 +483,9 @@ void DiceRoller::RollDice()
 		if (rollingDice[i]->IsActive())
 		{
 			//random torque, and +/- 15 degrees from positive x direction
-			rollingDice[i]->GetPhysicsObject()->AddTorque({RandomValue(0,50), RandomValue(0,50),RandomValue(0,50) });
-			Vector3 roll = Matrix4::Rotation(RandomValue(-40,40),{0,1,0}) * Vector3(1, 0, 0) * 200;
-			rollingDice[i]->GetPhysicsObject()->AddForce({roll});
+			rollingDice[i]->GetPhysicsObject()->AddTorque({ RandomValue(0,50), RandomValue(0,50),RandomValue(0,50) });
+			Vector3 roll = Matrix4::Rotation(RandomValue(-40, 40), { 0,1,0 }) * Vector3(1, 0, 0) * 200;
+			rollingDice[i]->GetPhysicsObject()->AddForce({ roll });
 		}
 	}
 }
