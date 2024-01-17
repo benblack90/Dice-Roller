@@ -106,7 +106,7 @@ void DiceRoller::UpdateGame(float dt) {
 	world->GetMainCamera().UpdateCamera(dt);
 	UpdateKeys();
 	SelectObject();
-	UpdateActiveDice();
+	HaltStoppedDice();
 
 	world->UpdateWorld(dt);
 	renderer->Update(dt);
@@ -141,9 +141,14 @@ void DiceRoller::UpdateKeys() {
 void DiceRoller::InitCamera() {
 	world->GetMainCamera().SetNearPlane(0.1f);
 	world->GetMainCamera().SetFarPlane(500.0f);
+	/*
 	world->GetMainCamera().SetPitch(-40.0f);
 	world->GetMainCamera().SetYaw(315.0f);
 	world->GetMainCamera().SetPosition(Vector3(-15, 20, 15));
+	*/
+	world->GetMainCamera().SetPitch(0);
+	world->GetMainCamera().SetYaw(0);
+	world->GetMainCamera().SetPosition(Vector3(0, 0, 10));
 	lockedObject = nullptr;
 }
 
@@ -151,7 +156,7 @@ void DiceRoller::InitWorld() {
 	world->ClearAndErase();
 	physics->Clear();
 
-	InitDiceTray();
+	//InitDiceTray();
 
 	//selection menu dice
 	GameObject* dice = AddD4({ -14,0,-2 }, 1, 0);
@@ -174,6 +179,22 @@ void DiceRoller::InitWorld() {
 	dice->GetRenderObject()->SetColour({ 1,1,1,0.5 });
 	dice->SetCollisionLayer(staticObj);
 	dice->SetName("selD20");
+
+	D20Volume* d20v = (D20Volume*) dice->GetBoundingVolume();
+	dice = AddD20({0,0,0 }, 1, 0);
+	dice->GetPhysicsObject()->useGravity = false;
+	dice->GetRenderObject()->SetColour({ 1,1,1,1 });
+	dice->SetCollisionLayer(staticObj);
+	dice->SetName("selD20");
+
+	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[1], {1,0,0,1}, 12000.f);
+	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[0], { 1,1,0,1 }, 12000.f);
+	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[4], { 1,1,1,1 }, 12000.f);
+
+	Debug::DrawLine({ 0,0,0 }, d20v->faceNormals[0]*100, {1,1,1,1}, 12000.f);
+
+	
+	
 
 	//rolling dice
 	rollingDice[d4] = AddD4({0,5,0}, 1, 10);
@@ -256,7 +277,7 @@ GameObject* DiceRoller::AddD8(const Vector3& position, float height, float inver
 	d8->SetRenderObject(new RenderObject(&d8->GetTransform(), d8Mesh, d8Tex, basicShader));
 	d8->SetPhysicsObject(new PhysicsObject(&d8->GetTransform(), d8->GetBoundingVolume()));
 	d8->GetPhysicsObject()->SetInverseMass(inverseMass);
-	d8->GetPhysicsObject()->InitD8Inertia();
+	d8->GetPhysicsObject()->InitSphereInertia();
 	world->AddGameObject(d8);
 	return d8;
 }
@@ -387,6 +408,7 @@ void DiceRoller::UpdateActiveDice()
 		{
 			rollingDice[i]->GetPhysicsObject()->useGravity = false;
 			rollingDice[i]->SetActive(false);
+			rollingDice[i]->SetCollisionLayer(standard);
 			ResetDicePositions();
 		}
 	}
@@ -401,8 +423,28 @@ void DiceRoller::UpdateActiveDice()
 			}
 			else
 			{
-				rollingDice[i]->SetActive(false);
+				rollingDice[i]->SetActive(false);				
 			}
+		}
+	}
+	
+}
+
+void DiceRoller::HaltStoppedDice()
+{
+	for (int i = d4; i < MAX; i++)
+	{
+		if (diceActive 
+			&& rollingDice[i]->GetCollisionLayer() != staticObj
+			&& rollingDice[i]->GetPhysicsObject()->GetForce().LengthSquared() <=0
+			&& rollingDice[i]->GetPhysicsObject()->GetLinearVelocity().LengthSquared() < 0.015f
+			&& rollingDice[i]->GetPhysicsObject()->GetAngularVelocity().LengthSquared() < 0.015f)
+		{
+			rollingDice[i]->GetPhysicsObject()->ClearForces();
+			rollingDice[i]->GetPhysicsObject()->SetAngularVelocity({ 0,0,0 });
+			rollingDice[i]->GetPhysicsObject()->SetLinearVelocity({ 0,0,0 });
+			rollingDice[i]->SetCollisionLayer(staticObj);
+			rollingDice[i]->GetPhysicsObject()->useGravity = false;
 		}
 	}
 	
@@ -415,6 +457,7 @@ void DiceRoller::ResetDicePositions()
 	rollingDice[d6]->GetTransform().SetPosition(d6Start);
 	rollingDice[d8]->GetTransform().SetPosition(d8Start);
 	rollingDice[d20]->GetTransform().SetPosition(d20Start);
+
 	
 }
 

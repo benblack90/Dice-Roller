@@ -20,6 +20,32 @@ float	KeyboardMouseController::GetAxis(uint32_t axis) const {
 		return mouse.GetRelativePosition().y;
 	}
 
+	else if (axis == ZAxis) {
+		if (keyboard.KeyDown(NCL::KeyCodes::W)) {
+			return 0.2f;
+		}
+		if (keyboard.KeyDown(NCL::KeyCodes::S)) {
+			return -0.2f;
+		}
+	}
+
+	else if (axis == XAxis) {
+		if (keyboard.KeyDown(NCL::KeyCodes::D)) {
+			return 0.2f;
+		}
+		if (keyboard.KeyDown(NCL::KeyCodes::A)) {
+			return -0.2f;
+		}
+	}
+	else if (axis == YAxis) {
+		if (keyboard.KeyDown(NCL::KeyCodes::SHIFT)) {
+			return 0.2f;
+		}
+		if (keyboard.KeyDown(NCL::KeyCodes::CONTROL)) {
+			return -0.2f;
+		}
+	}
+
 	return 0.0f;
 }
 

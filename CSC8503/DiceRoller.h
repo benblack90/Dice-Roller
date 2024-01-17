@@ -41,6 +41,7 @@ namespace NCL {
 			void UpdateActiveDice();
 			void ResetDicePositions();
 			void RollDice();
+			void HaltStoppedDice();
 
 
 			GameObject* AddFloorToWorld(const Vector3& position, const Vector3& dimensions);

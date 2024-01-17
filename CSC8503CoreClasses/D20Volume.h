@@ -50,10 +50,22 @@ namespace NCL {
 			localVerts[9] = { -0.5f * edgeLength,halfGoldRatio * edgeLength,0.0f };
 			localVerts[10] = { 0.5f * edgeLength,-halfGoldRatio * edgeLength,0.0f };
 			localVerts[11] = { -0.5f * edgeLength,-halfGoldRatio * edgeLength,0.0f };
+
+			SetFaceNormals();
 		}
 		~D20Volume() {}
 
 		float GetEdgeLength() const { return edgeLength; }
+
+		void SetFaceNormals()
+		{
+			faceNormals[SEVENTEEN] = Vector3::Cross(localVerts[8] - localVerts[9], localVerts[8] - localVerts[0]);
+			faceNormals[TEN] = Vector3::Cross(localVerts[8] - localVerts[2], localVerts[8] - localVerts[9]);
+			faceNormals[SEVEN] = Vector3::Cross(localVerts[8] - localVerts[0], localVerts[8] - localVerts[4]);
+			faceNormals[THREE] = Vector3::Cross(localVerts[9] - localVerts[5], localVerts[9] - localVerts[0]);
+			faceNormals[SIXTEEN] = Vector3::Cross(localVerts[5] - localVerts[0], localVerts[1] - localVerts[0]);
+			faceNormals[ONE] = Vector3::Cross(localVerts[1] - localVerts[0], localVerts[4] - localVerts[0]);
+		}
 
 		//NB: while the d20 is a regular icosahedron, this support function is particular to this mesh's orientation. 
 		Maths::Vector3 Support(const Maths::Vector3& dir, const NCL::CSC8503::Transform& tr) const override
@@ -73,11 +85,13 @@ namespace NCL {
 
 		}
 
+		Vector3 localVerts[12];
+		Vector3 faceNormals[20];
+
 
 	protected:
 		float edgeLength;
 		//the golden ratio is used here to work out where the vertices are. It's halved, because the whole golden ratio works for an edge length of 2, not 1
-		float halfGoldRatio = (1.0f + sqrt(5.0f) / 2) / 2;
-		Vector3 localVerts[12];
+		float halfGoldRatio = (1.0f + sqrt(5.0f)) / 2.0f / 2.0f;		
 	};
 }
