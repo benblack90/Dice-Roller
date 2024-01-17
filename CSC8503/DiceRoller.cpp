@@ -186,16 +186,13 @@ void DiceRoller::InitWorld() {
 	dice->GetRenderObject()->SetColour({ 1,1,1,1 });
 	dice->SetCollisionLayer(staticObj);
 	dice->SetName("selD20");
+	/*
+	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[8], {1,0,0,1}, 12000.f);
+	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[2], { 1,1,0,1 }, 12000.f);
+	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[6], { 1,1,1,1 }, 12000.f);
 
-	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[1], {1,0,0,1}, 12000.f);
-	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[0], { 1,1,0,1 }, 12000.f);
-	Debug::DrawLine({ 0,0,0 }, d20v->localVerts[4], { 1,1,1,1 }, 12000.f);
-
-	Debug::DrawLine({ 0,0,0 }, d20v->faceNormals[0]*100, {1,1,1,1}, 12000.f);
-
-	
-	
-
+	Debug::DrawLine({ 0,0,0 }, d20v->faceNormals[11]*100, {1,1,1,1}, 12000.f);
+	*/
 	//rolling dice
 	rollingDice[d4] = AddD4({0,5,0}, 1, 10);
 	rollingDice[d4]->GetPhysicsObject()->useGravity = false;

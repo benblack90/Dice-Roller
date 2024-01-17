@@ -59,12 +59,26 @@ namespace NCL {
 
 		void SetFaceNormals()
 		{
-			faceNormals[SEVENTEEN] = Vector3::Cross(localVerts[8] - localVerts[9], localVerts[8] - localVerts[0]);
-			faceNormals[TEN] = Vector3::Cross(localVerts[8] - localVerts[2], localVerts[8] - localVerts[9]);
-			faceNormals[SEVEN] = Vector3::Cross(localVerts[8] - localVerts[0], localVerts[8] - localVerts[4]);
-			faceNormals[THREE] = Vector3::Cross(localVerts[9] - localVerts[5], localVerts[9] - localVerts[0]);
-			faceNormals[SIXTEEN] = Vector3::Cross(localVerts[5] - localVerts[0], localVerts[1] - localVerts[0]);
 			faceNormals[ONE] = Vector3::Cross(localVerts[1] - localVerts[0], localVerts[4] - localVerts[0]);
+			faceNormals[TWO] = Vector3::Cross(localVerts[6] - localVerts[2], localVerts[3] - localVerts[2]);
+			faceNormals[THREE] = Vector3::Cross(localVerts[9] - localVerts[5], localVerts[9] - localVerts[0]);
+			faceNormals[FOUR] = Vector3::Cross(localVerts[11] - localVerts[10], localVerts[3] - localVerts[10]);
+			faceNormals[FIVE] = Vector3::Cross(localVerts[6] - localVerts[10], localVerts[4] - localVerts[10]);
+			faceNormals[SIX] = Vector3::Cross(localVerts[7] - localVerts[5], localVerts[11] - localVerts[5]);
+			faceNormals[SEVEN] = Vector3::Cross(localVerts[8] - localVerts[0], localVerts[8] - localVerts[4]);
+			faceNormals[EIGHT] = Vector3::Cross(localVerts[2] - localVerts[9], localVerts[7] - localVerts[9]);
+			faceNormals[NINE] = Vector3::Cross(localVerts[11] - localVerts[5], localVerts[1] - localVerts[5]);
+			faceNormals[TEN] = Vector3::Cross(localVerts[8] - localVerts[2], localVerts[8] - localVerts[9]);
+			faceNormals[ELEVEN] = Vector3::Cross(localVerts[11] - localVerts[1], localVerts[10] - localVerts[1]);
+			faceNormals[TWELVE] = Vector3::Cross(localVerts[6] - localVerts[8], localVerts[2] - localVerts[8]);
+			faceNormals[THIRTEEN] = Vector3::Cross(localVerts[1] - localVerts[4], localVerts[10] - localVerts[4]);
+			faceNormals[FOURTEEN] = Vector3::Cross(localVerts[3] - localVerts[7], localVerts[11] - localVerts[7]);
+			faceNormals[FIFTEEN] = Vector3::Cross(localVerts[4] - localVerts[8], localVerts[6] - localVerts[8]);
+			faceNormals[SIXTEEN] = Vector3::Cross(localVerts[7] - localVerts[9], localVerts[5] - localVerts[9]);
+			faceNormals[SEVENTEEN] = Vector3::Cross(localVerts[8] - localVerts[9], localVerts[8] - localVerts[0]);
+			faceNormals[EIGHTEEN] = Vector3::Cross(localVerts[10] - localVerts[6], localVerts[3] - localVerts[6]);
+			faceNormals[NINETEEN] = Vector3::Cross(localVerts[5] - localVerts[0], localVerts[1] - localVerts[0]);
+			faceNormals[TWENTY] = Vector3::Cross(localVerts[3] - localVerts[2], localVerts[7] - localVerts[2]);			
 		}
 
 		//NB: while the d20 is a regular icosahedron, this support function is particular to this mesh's orientation. 
@@ -75,9 +89,10 @@ namespace NCL {
 			int index = -1;
 			for (int i = 0; i < 12; i++)
 			{
-				if (Vector3::Dot(localDir, localVerts[i].Normalised()) > dotMax)
+				float currentDot = Vector3::Dot(localDir, localVerts[i].Normalised());
+				if (currentDot > dotMax)
 				{
-					dotMax = Vector3::Dot(localDir, localVerts[i].Normalised());
+					dotMax = currentDot;
 					index = i;
 				}
 			}
@@ -85,11 +100,27 @@ namespace NCL {
 
 		}
 
-		Vector3 localVerts[12];
-		Vector3 faceNormals[20];
+		short GetFaceResult(const NCL::CSC8503::Transform& tr) const
+		{
+			Vector3 upLocalised = (tr.GetOrientation().Conjugate() * Vector3(0,1,0)).Normalised();
+			float dotMax = FLT_MIN;
+			short index = -1;
+			for (short i = 0; i < 20; i++)
+			{
+				float currentDot = Vector3::Dot(upLocalised, faceNormals[i]);
+				if (currentDot > dotMax)
+				{
+					dotMax = currentDot;
+					index = i;
+				}
+			}
+			return index + 1;
+		}
 
 
 	protected:
+		Vector3 localVerts[12];
+		Vector3 faceNormals[20];
 		float edgeLength;
 		//the golden ratio is used here to work out where the vertices are. It's halved, because the whole golden ratio works for an edge length of 2, not 1
 		float halfGoldRatio = (1.0f + sqrt(5.0f)) / 2.0f / 2.0f;		

@@ -1,5 +1,4 @@
-﻿  Building Custom Rule C:/Users/Ben/source/repos/Dice Roller/OpenGLRendering/CMakeLists.txt
-  cmake_pch.cxx
+﻿  cmake_pch.cxx
   OGLTexture.h
   OGLShader.h
   OGLRenderer.h
