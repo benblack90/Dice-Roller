@@ -41,7 +41,6 @@ namespace NCL {
 			void UpdateActiveDice();
 			void ResetDicePositions();
 			void RollDice();
-			void HaltStoppedDice();
 			void DisplayDiceResults();
 
 
@@ -95,6 +94,7 @@ namespace NCL {
 			Vector3 d20Start = { -5,5,2 };
 
 			bool diceActive;
+			float sceneTime;
 
 			//Coursework Additional functionality	
 			GameObject* lockedObject = nullptr;

@@ -107,9 +107,10 @@ void DiceRoller::UpdateGame(float dt) {
 	world->GetMainCamera().UpdateCamera(dt);
 	UpdateKeys();
 	SelectObject();
-	HaltStoppedDice();
-	DisplayDiceResults();
+	if (diceActive) sceneTime += dt;
+	else sceneTime = 0;
 
+	DisplayDiceResults();
 
 	world->UpdateWorld(dt);
 	renderer->Update(dt);
@@ -378,10 +379,10 @@ void DiceRoller::InitDiceTray()
 {
 	Vector3 dimensions = { 10,2,10 };
 	GameObject* floor = AddFloorToWorld({ 0,0,0 }, dimensions);
-	AddCubeToWorld({ 0,dimensions.y,dimensions.z - 1.0f }, { dimensions.x,3,1 }, woodTex, 0);
-	AddCubeToWorld({ 0,dimensions.y,-dimensions.z + 1.0f }, { dimensions.x,3,1 }, woodTex, 0);
-	AddCubeToWorld({ dimensions.x - 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
-	AddCubeToWorld({ -dimensions.x + 1.0f,dimensions.y,0 }, { 1,3,dimensions.z }, woodTex, 0);
+	AddCubeToWorld({ 0,dimensions.y,dimensions.z - 1.0f }, { dimensions.x,4,1 }, woodTex, 0);
+	AddCubeToWorld({ 0,dimensions.y,-dimensions.z + 1.0f }, { dimensions.x,4,1 }, woodTex, 0);
+	AddCubeToWorld({ dimensions.x - 1.0f,dimensions.y,0 }, { 1,4,dimensions.z }, woodTex, 0);
+	AddCubeToWorld({ -dimensions.x + 1.0f,dimensions.y,0 }, { 1,4,dimensions.z }, woodTex, 0);
 }
 
 void DiceRoller::UpdateActiveDice()
@@ -414,28 +415,10 @@ void DiceRoller::UpdateActiveDice()
 
 }
 
-void DiceRoller::HaltStoppedDice()
-{
-	for (int i = d4; i < MAX; i++)
-	{
-		if (diceActive
-			&& rollingDice[i]->GetCollisionLayer() != staticObj
-			&& rollingDice[i]->GetPhysicsObject()->GetForce().LengthSquared() <= 0
-			&& rollingDice[i]->GetPhysicsObject()->GetLinearVelocity().LengthSquared() < 0.02f
-			&& rollingDice[i]->GetPhysicsObject()->GetAngularVelocity().LengthSquared() < 0.02f)
-		{
-			rollingDice[i]->GetPhysicsObject()->ClearForces();
-			rollingDice[i]->GetPhysicsObject()->SetAngularVelocity({ 0,0,0 });
-			rollingDice[i]->GetPhysicsObject()->SetLinearVelocity({ 0,0,0 });
-			rollingDice[i]->SetCollisionLayer(staticObj);
-			rollingDice[i]->GetPhysicsObject()->useGravity = false;
-		}
-	}
-}
 
 void DiceRoller::DisplayDiceResults()
 {
-	for (int i = 0; i < MAX; i++) if (rollingDice[i]->GetCollisionLayer() != staticObj) return;
+	if (sceneTime < 5.0f) return;
 
 	if (selectedDice[d4] != nullptr)
 	{
@@ -467,13 +450,14 @@ void DiceRoller::DisplayDiceResults()
 
 void DiceRoller::ResetDicePositions()
 {
-
 	rollingDice[d4]->GetTransform().SetPosition(d4Start);
+	rollingDice[d4]->GetPhysicsObject()->SetLinearVelocity({ 0,0,0 });
 	rollingDice[d6]->GetTransform().SetPosition(d6Start);
+	rollingDice[d6]->GetPhysicsObject()->SetLinearVelocity({ 0,0,0 });
 	rollingDice[d8]->GetTransform().SetPosition(d8Start);
+	rollingDice[d8]->GetPhysicsObject()->SetLinearVelocity({ 0,0,0 });
 	rollingDice[d20]->GetTransform().SetPosition(d20Start);
-
-
+	rollingDice[d20]->GetPhysicsObject()->SetLinearVelocity({ 0,0,0 });
 }
 
 void DiceRoller::RollDice()

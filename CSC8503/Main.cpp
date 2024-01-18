@@ -32,7 +32,7 @@ using namespace CSC8503;
 
 
 int main() {
-	Window*w = Window::CreateGameWindow("CSC8503 Game technology!", 1280, 720);
+	Window*w = Window::CreateGameWindow("CSC8503 Game technology!", 1280, 720, true);
 	//TestPushdownAutomata(w);
 	if (!w->HasInitialised()) {
 		return -1;
