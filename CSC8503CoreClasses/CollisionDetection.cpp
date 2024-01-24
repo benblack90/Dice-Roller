@@ -556,124 +556,115 @@ void CollisionDetection::BuildMinkVals(Vector3 searchIn, GameObject* a, GameObje
 	mv[gjk_ind].mkw = mv[gjk_ind].bPos - mv[gjk_ind].aPos;
 }
 
-void NCL::CollisionDetection::EPA(GameObject* a, GameObject* b, MinkVals* corners, CollisionInfo& collisionInfo)
+void CollisionDetection::EPA(GameObject* a, GameObject* b, MinkVals* corners, CollisionInfo& collisionInfo)
 {
-	//convert starting simplex's corners to a log of faces
-	std::vector<Face> faces;
-	Face holder;
-	holder.a = corners[GJK_A]; holder.b = corners[GJK_B]; holder.c = corners[GJK_C];
-	holder.BuildNorm();
-	faces.push_back(holder);
-	holder.a = corners[GJK_A]; holder.b = corners[GJK_C]; holder.c = corners[GJK_D];
-	holder.BuildNorm();
-	faces.push_back(holder);
-	holder.a = corners[GJK_A]; holder.b = corners[GJK_D]; holder.c = corners[GJK_B];
-	holder.BuildNorm();
-	faces.push_back(holder);
-	holder.a = corners[GJK_B]; holder.b = corners[GJK_D]; holder.c = corners[GJK_C];
-	holder.BuildNorm();
-	faces.push_back(holder);
-
+	std::vector<Face> faces = ConvertSimplexToFaces(corners);
 	std::vector<std::pair <MinkVals, MinkVals>> uniqueEdges;
 	std::pair<int, float> closestFaceInfo;
-
-	for (int i = 0; i < 64; i++)
+	int interations = 64;
+	for (int i = 0; i < interations; i++)
 	{
 		closestFaceInfo = FindClosestFace(faces);
 		int closestFaceIndex = closestFaceInfo.first;
 		float closestFaceDist = closestFaceInfo.second;
-		//test out closest face - does searching in the direction of its normal move it any?
 		MinkVals newCorner;
-		BuildMinkVals(faces[closestFaceIndex].normal, a, b, &newCorner, GJK_A);
-		float diff = abs(Vector3::Dot(faces[closestFaceIndex].normal, newCorner.mkw) - closestFaceDist);
-		//if our new corner comes out with (reasonably) the same distance from the origin, pull out the party hats:
-		//we've reached the edge of the minkowski difference space, and can thus find no plane closer to the origin
-		if (abs(Vector3::Dot(faces[closestFaceIndex].normal, newCorner.mkw) - closestFaceDist) < 0.001f)
+		BuildMinkVals(faces[closestFaceIndex].normal, a, b, &newCorner);
+
+		float oldVsNewFaceDistance = abs(Vector3::Dot(faces[closestFaceIndex].normal, newCorner.mkw) - closestFaceDist);
+
+		if (oldVsNewFaceDistance < 0.001f)
 		{
 			LogGJKEPACollisionInfo(faces, closestFaceInfo, collisionInfo, a->GetTransform().GetPosition(), b->GetTransform().GetPosition());
 			return;
 		}
-
-		//if not, we need to add our new corner to the polytope, while deleting the old faces AND edges
-		FindUniqueEdges(faces, uniqueEdges, newCorner);
-		//add faces based on these unique edges
-		for (int i = 0; i < uniqueEdges.size(); i++)
+		else
 		{
-			Face f;
-			f.a = uniqueEdges[i].first;
-			f.b = uniqueEdges[i].second;
-			f.c = newCorner;
-			f.BuildNorm();
-			//reverse the normal, if it's facing the wrong way - now I don't have to worry my pretty little head about winding :)
-			if (Vector3::Dot(f.a.mkw, f.normal) < 0)
-				f.normal *= -1;
-
-			faces.push_back(f);
-		}
+			FindUniqueEdges(faces, uniqueEdges, newCorner);
+			ConvertEdgesToFaces(uniqueEdges, faces, newCorner);
+		}		
 	}
-
-	//if, after 32 runs, we cannot find an edge within tolerance, send our best guess
+	//if, after an arbitrary number of runs, we cannot find an edge within tolerance, send our best guess
 	closestFaceInfo = FindClosestFace(faces);
 	LogGJKEPACollisionInfo(faces, closestFaceInfo, collisionInfo, a->GetTransform().GetPosition(), b->GetTransform().GetPosition());
+}
+
+std::vector<CollisionDetection::Face> CollisionDetection::ConvertSimplexToFaces(MinkVals* corners)
+{
+	std::vector<CollisionDetection::Face> faces(4);
+	faces[0].a = corners[GJK_A]; faces[0].b = corners[GJK_B]; faces[0].c = corners[GJK_C];
+	faces[1].a = corners[GJK_A]; faces[1].b = corners[GJK_C]; faces[1].c = corners[GJK_D];
+	faces[2].a = corners[GJK_A]; faces[2].b = corners[GJK_D]; faces[2].c = corners[GJK_B];
+	faces[3].a = corners[GJK_B]; faces[3].b = corners[GJK_D]; faces[3].c = corners[GJK_C];
+	for (int i = 0; i < faces.size(); i++)
+		faces[i].BuildNorm();
+	return faces;
+}
+
+void CollisionDetection::ConvertEdgesToFaces(const std::vector<std::pair<MinkVals, MinkVals>>& uniqueEdges, std::vector<Face>& faces, const MinkVals& newCorner)
+{
+	for (int i = 0; i < uniqueEdges.size(); i++)
+	{
+		Face f;
+		f.a = uniqueEdges[i].first;
+		f.b = uniqueEdges[i].second;
+		f.c = newCorner;
+		f.BuildNorm();
+		//all normals must by definition face away from the normal: now I don't have to worry my pretty little head about winding :)
+		if (Vector3::Dot(f.a.mkw, f.normal) < 0)
+			f.normal *= -1;
+
+		faces.push_back(f);
+	}
 }
 
 void CollisionDetection::FindUniqueEdges(std::vector<Face>& faces, std::vector<std::pair<MinkVals, MinkVals>>& uniqueEdges, const MinkVals& newCorner)
 {
 	uniqueEdges.clear();
 
+	//note the non-standard for-loop: it's because we're erasing values as we go, and C++ gets very angry if you try to then iterate on an erased value
 	for (auto i = faces.begin(); i != faces.end();)
 	{
-		//if a face's normal is in the same hemisphere as the direction to our new corner, it's on the chopping block
 		if (Vector3::Dot(i->normal, newCorner.mkw) > 0)
 		{
-			//log its edges, keeping only the unique (i.e. not shared by any of the other to-be-chopped faces) edges
 			std::pair<Vector3, Vector3> edges[3];
 			edges[0] = std::make_pair(i->a.mkw, i->b.mkw);
 			edges[1] = std::make_pair(i->a.mkw, i->c.mkw);
 			edges[2] = std::make_pair(i->b.mkw, i->c.mkw);
 
-			bool found0 = false;
-			bool found1 = false;
-			bool found2 = false;
-			for (auto j = uniqueEdges.begin(); j != uniqueEdges.end();)
-			{
-				//delete any edges we find from the unique list. Mark the corresponding bool, so we know not to add it again later
-				if ((j->first.mkw == edges[0].first && j->second.mkw == edges[0].second)
-					|| (j->first.mkw == edges[0].second && j->second.mkw == edges[0].first))
-				{
-					j = uniqueEdges.erase(j);
-					found0 = true;
-					continue;
-				}
-				if ((j->first.mkw == edges[1].first && j->second.mkw == edges[1].second)
-					|| (j->first.mkw == edges[1].second && j->second.mkw == edges[1].first))
-				{
-					j = uniqueEdges.erase(j);
-					found1 = true;
-					continue;
-				}
-				if ((j->first.mkw == edges[2].first && j->second.mkw == edges[2].second)
-					|| (j->first.mkw == edges[2].second && j->second.mkw == edges[2].first))
-				{
-					j = uniqueEdges.erase(j);
-					found2 = true;
-					continue;
-				}
-				j++;
-			}
-			//add the edges we didn't find in the unique list
-			if (!found0)
+			bool found[3] = { false };
+			DeleteSharedEdges(uniqueEdges, edges, found);
+			
+			if (!found[0])
 				uniqueEdges.push_back(std::make_pair(i->a, i->b));
-			if (!found1)
+			if (!found[1])
 				uniqueEdges.push_back(std::make_pair(i->a, i->c));
-			if (!found2)
+			if (!found[2])
 				uniqueEdges.push_back(std::make_pair(i->b, i->c));
-
-			//delete the face. As we're going forward by 1 each time, -1 from the value so we don't skip ahead
 			i = faces.erase(i);
 			continue;
 		}
 		i++;
+	}
+}
+
+void CollisionDetection::DeleteSharedEdges(std::vector<std::pair<MinkVals, MinkVals>>& uniqueEdges, std::pair<Vector3, Vector3>* edges, bool* foundEdges)
+{
+	//note the non-standard for-loop: it's because we're erasing values as we go, and C++ gets very angry if you try to then iterate on an erased value
+	for (auto j = uniqueEdges.begin(); j != uniqueEdges.end();)
+	{
+		bool matched = false;
+		for (int k = 0; k < 3; k++)
+		{
+			if ((j->first.mkw == edges[k].first && j->second.mkw == edges[k].second)
+				|| (j->first.mkw == edges[k].second && j->second.mkw == edges[k].first))
+			{
+				j = uniqueEdges.erase(j);
+				foundEdges[k] = true;
+				matched = true;
+				break;
+			}			
+		}
+		if (!matched) j++;
 	}
 }
 

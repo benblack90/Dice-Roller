@@ -155,11 +155,14 @@ namespace NCL {
 		~CollisionDetection()	{}
 		static bool GJKTriangleCase(MinkVals* corners, Vector3& searchIn);
 		static bool GJKTetraCase(MinkVals* corners, Vector3& searchIn);
-		static void BuildMinkVals(Vector3 searchIn, GameObject* a, GameObject* b, MinkVals* mv, GJK_Points gjk_ind);
+		static void BuildMinkVals(Vector3 searchIn, GameObject* a, GameObject* b, MinkVals* mv, GJK_Points gjk_ind = GJK_A);
 		static void EPA(GameObject* a, GameObject* b, MinkVals* corners, CollisionInfo& collisionInfo);
 		static void LogGJKEPACollisionInfo(std::vector<Face>& faces, std::pair<int, float> closestFaceInfo, CollisionInfo& collisionInfo, Vector3 aPos, Vector3 bPos);
 		static std::pair<int, float> FindClosestFace(std::vector<Face>& faces);
 		static void FindUniqueEdges(std::vector<Face>& faces, std::vector<std::pair<MinkVals, MinkVals>>& uniqueEdges, const MinkVals& newCorner);
+		static void DeleteSharedEdges(std::vector<std::pair<MinkVals, MinkVals>>& uniqueEdges, std::pair<Vector3, Vector3>* edges, bool* foundEdges);
+		static std::vector<Face> ConvertSimplexToFaces(MinkVals* corners);
+		static void ConvertEdgesToFaces(const std::vector<std::pair<MinkVals, MinkVals>>& uniqueEdges, std::vector<Face>& faces, const MinkVals& newCorner);
 	};
 }
 
