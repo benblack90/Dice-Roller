@@ -45,13 +45,10 @@ namespace NCL {
 
 
 			GameObject* AddFloorToWorld(const Vector3& position, const Vector3& dimensions);
-			GameObject* AddSphereToWorld(const Vector3& position, float radius, float inverseMass = 10.0f);
 			GameObject* AddCubeToWorld(const Vector3& position, Vector3 dimensions, Texture* tex, float inverseMass = 10.0f);
 			GameObject* AddD4(const Vector3& position, float radius, float inverseMass = 10.0f);
 			GameObject* AddD6(const Vector3& position, Vector3 dimensions, float inverseMass = 10.0f);
 			GameObject* AddD8(const Vector3& position, float height, float inverseMass = 10.0f);
-			GameObject* AddD10(const Vector3& position, float height, float inverseMass = 10.0f);
-			GameObject* AddD12(const Vector3& position, float height, float inverseMass = 10.0f);
 			GameObject* AddD20(const Vector3& position, float height, float inverseMass = 10.0f);
 
 #ifdef USEVULKAN

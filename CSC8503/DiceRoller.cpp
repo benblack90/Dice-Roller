@@ -267,15 +267,6 @@ GameObject* DiceRoller::AddD8(const Vector3& position, float height, float inver
 	return d8;
 }
 
-GameObject* DiceRoller::AddD10(const Vector3& position, float height, float inverseMass)
-{
-	return nullptr;
-}
-
-GameObject* DiceRoller::AddD12(const Vector3& position, float height, float inverseMass)
-{
-	return nullptr;
-}
 
 GameObject* DiceRoller::AddD20(const Vector3& position, float height, float inverseMass)
 {
@@ -346,34 +337,6 @@ GameObject* DiceRoller::AddFloorToWorld(const Vector3& position, const Vector3& 
 }
 
 
-/*
-
-Builds a game object that uses a sphere mesh for its graphics, and a bounding sphere for its
-rigid body representation. This and the cube function will let you build a lot of 'simple'
-physics worlds. You'll probably need another function for the creation of OBB cubes too.
-
-*/
-GameObject* DiceRoller::AddSphereToWorld(const Vector3& position, float radius, float inverseMass) {
-	GameObject* sphere = new GameObject();
-
-	Vector3 sphereSize = Vector3(radius, radius, radius);
-	SphereVolume* volume = new SphereVolume(radius);
-	sphere->SetBoundingVolume((CollisionVolume*)volume);
-
-	sphere->GetTransform()
-		.SetScale(sphereSize)
-		.SetPosition(position);
-
-	sphere->SetRenderObject(new RenderObject(&sphere->GetTransform(), sphereMesh, basicTex, basicShader));
-	sphere->SetPhysicsObject(new PhysicsObject(&sphere->GetTransform(), sphere->GetBoundingVolume()));
-
-	sphere->GetPhysicsObject()->SetInverseMass(inverseMass);
-	sphere->GetPhysicsObject()->InitSphereInertia();
-
-	world->AddGameObject(sphere);
-
-	return sphere;
-}
 
 void DiceRoller::InitDiceTray()
 {
