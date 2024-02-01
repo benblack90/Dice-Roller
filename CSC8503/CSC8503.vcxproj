@@ -201,7 +201,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\StateGameObject.h" />
     <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\DiceRoller.h" />
     <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\PlayerObject.h" />
-    <ClInclude Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\Menu.h" />
     <ClCompile Include="C:\Users\Ben\source\repos\Dice Roller\CSC8503\GameTechRenderer.cpp">
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Ben/source/repos/Dice Roller/CSC8503/CMakeFiles/CSC8503.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
